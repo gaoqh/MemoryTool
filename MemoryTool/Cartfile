@@ -1,0 +1,5 @@
+github "DaveWoodCom/XCGLogger" ~> 3.3
+github "rs/SDWebImage"			
+github "Alamofire/Alamofire" ~> 3.4
+github "SVProgressHUD/SVProgressHUD"
+github "SnapKit/SnapKit"          
