@@ -17,7 +17,9 @@ class HomeViewController: UIViewController, UINavigationControllerDelegate {
     private var monthLabel: UILabel!
     private var selectedDay: DayView!
     private var addPlanBtn: UIButton!
+    //数据源
     var reviseDaysArray: [CVDate] = [CVDate]()
+
     
     var animationFinished = true
     //MARK: - 生命周期
@@ -26,16 +28,17 @@ class HomeViewController: UIViewController, UINavigationControllerDelegate {
 
         setNav()
         configUI()
+        
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-//        navigationController?.setNavigationBarHidden(true, animated: animated)
+
     }
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
-//        navigationController?.setNavigationBarHidden(false, animated: animated)
+
     }
     
     override func viewDidLayoutSubviews() {
@@ -91,14 +94,17 @@ class HomeViewController: UIViewController, UINavigationControllerDelegate {
     }
     
     func addPlanBtnClick() {
-        let nav = UINavigationController(rootViewController: AddPlanViewController())
-        presentViewController(nav, animated: true, completion: nil)
+//        let nav = UINavigationController(rootViewController: AddPlanViewController())
+//        presentViewController(nav, animated: true, completion: nil)
+        navigationController?.pushViewController(DBTestViewController(), animated: true)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+
     
     //MARK: - UINavigationDelegate
     //隐藏导航条的背景

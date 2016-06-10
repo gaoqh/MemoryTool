@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		010F947A1D0A5960006F9266 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C4D65D1D08EEEC0079AD7D /* SnapKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		010F95651D0A73C6006F9266 /* AddPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010F95641D0A73C6006F9266 /* AddPlanViewController.swift */; };
+		010F95B91D0ABB32006F9266 /* SQLiteDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010F95B61D0ABB32006F9266 /* SQLiteDB.swift */; };
+		010F95BA1D0ABB32006F9266 /* SQLTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010F95B71D0ABB32006F9266 /* SQLTable.swift */; };
+		010F95BB1D0ABB32006F9266 /* String-Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010F95B81D0ABB32006F9266 /* String-Extras.swift */; };
+		010F95BE1D0AC0F3006F9266 /* DBTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010F95BD1D0AC0F3006F9266 /* DBTestViewController.swift */; };
+		010F95C01D0ADF9F006F9266 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 010F95BF1D0ADF9F006F9266 /* libsqlite3.0.tbd */; };
 		014D44731D0979CD00561B78 /* ReviseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014D44721D0979CD00561B78 /* ReviseViewController.swift */; };
 		019203F81D086F16008F1F0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019203F71D086F16008F1F0C /* AppDelegate.swift */; };
 		019203FD1D086F16008F1F0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 019203FB1D086F16008F1F0C /* Main.storyboard */; };
@@ -105,6 +110,12 @@
 
 /* Begin PBXFileReference section */
 		010F95641D0A73C6006F9266 /* AddPlanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPlanViewController.swift; sourceTree = "<group>"; };
+		010F95AA1D0AB944006F9266 /* MemoryTool-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MemoryTool-Bridging-Header.h"; sourceTree = "<group>"; };
+		010F95B61D0ABB32006F9266 /* SQLiteDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteDB.swift; sourceTree = "<group>"; };
+		010F95B71D0ABB32006F9266 /* SQLTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLTable.swift; sourceTree = "<group>"; };
+		010F95B81D0ABB32006F9266 /* String-Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String-Extras.swift"; sourceTree = "<group>"; };
+		010F95BD1D0AC0F3006F9266 /* DBTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBTestViewController.swift; sourceTree = "<group>"; };
+		010F95BF1D0ADF9F006F9266 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		014D44721D0979CD00561B78 /* ReviseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviseViewController.swift; sourceTree = "<group>"; };
 		019203F41D086F16008F1F0C /* MemoryTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoryTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		019203F71D086F16008F1F0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -171,6 +182,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				010F95C01D0ADF9F006F9266 /* libsqlite3.0.tbd in Frameworks */,
 				01C4D6671D08EEEC0079AD7D /* XCGLogger.framework in Frameworks */,
 				01C4D6631D08EEEC0079AD7D /* SVProgressHUD.framework in Frameworks */,
 				01C4D65A1D08EEE10079AD7D /* Alamofire.framework in Frameworks */,
@@ -196,6 +208,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		010F95B51D0ABB32006F9266 /* SQLiteDB */ = {
+			isa = PBXGroup;
+			children = (
+				010F95B61D0ABB32006F9266 /* SQLiteDB.swift */,
+				010F95B71D0ABB32006F9266 /* SQLTable.swift */,
+				010F95B81D0ABB32006F9266 /* String-Extras.swift */,
+			);
+			path = SQLiteDB;
+			sourceTree = "<group>";
+		};
+		010F95BC1D0AC0B7006F9266 /* SQLite */ = {
+			isa = PBXGroup;
+			children = (
+				010F95BD1D0AC0F3006F9266 /* DBTestViewController.swift */,
+			);
+			name = SQLite;
+			sourceTree = "<group>";
+		};
 		014D44751D0A517A00561B78 /* Revise */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,6 +237,8 @@
 		019203EB1D086F16008F1F0C = {
 			isa = PBXGroup;
 			children = (
+				010F95BF1D0ADF9F006F9266 /* libsqlite3.0.tbd */,
+				010F95B51D0ABB32006F9266 /* SQLiteDB */,
 				01D6FB5F1D091BBF0086A940 /* Dependencies */,
 				01C4D6691D08EEFD0079AD7D /* ThirdFrameworks */,
 				01C4D6241D08E8970079AD7D /* Utils */,
@@ -231,6 +263,7 @@
 		019203F61D086F16008F1F0C /* MemoryTool */ = {
 			isa = PBXGroup;
 			children = (
+				010F95BC1D0AC0B7006F9266 /* SQLite */,
 				014D44751D0A517A00561B78 /* Revise */,
 				01D6FB981D091D2C0086A940 /* Config */,
 				01C4D62F1D08E9790079AD7D /* Home */,
@@ -260,6 +293,7 @@
 		01C4D6101D08E8440079AD7D /* App */ = {
 			isa = PBXGroup;
 			children = (
+				010F95AA1D0AB944006F9266 /* MemoryTool-Bridging-Header.h */,
 				019203F71D086F16008F1F0C /* AppDelegate.swift */,
 				019203FB1D086F16008F1F0C /* Main.storyboard */,
 				019203FE1D086F16008F1F0C /* Assets.xcassets */,
@@ -513,8 +547,10 @@
 				01C4D6211D08E88D0079AD7D /* UIColorExtensions.swift in Sources */,
 				01C4D6201D08E88D0079AD7D /* UIBarButtonItemExtensions.swift in Sources */,
 				01D6FB951D091BC00086A940 /* CVShape.swift in Sources */,
+				010F95B91D0ABB32006F9266 /* SQLiteDB.swift in Sources */,
 				01D6FB871D091BC00086A940 /* CVCalendarViewAnimator.swift in Sources */,
 				01D6FB851D091BC00086A940 /* CVCalendarTouchController.swift in Sources */,
+				010F95BA1D0ABB32006F9266 /* SQLTable.swift in Sources */,
 				01D6FB831D091BC00086A940 /* CVCalendarMonthContentViewController.swift in Sources */,
 				014D44731D0979CD00561B78 /* ReviseViewController.swift in Sources */,
 				01C4D61E1D08E88D0079AD7D /* NSURLExtensions.swift in Sources */,
@@ -525,6 +561,7 @@
 				01D6FB821D091BC00086A940 /* CVCalendarMenuViewDelegate.swift in Sources */,
 				01D6FB941D091BC00086A940 /* CVSet.swift in Sources */,
 				01C4D62A1D08E8970079AD7D /* AppInfo.swift in Sources */,
+				010F95BE1D0AC0F3006F9266 /* DBTestViewController.swift in Sources */,
 				01D6FB841D091BC00086A940 /* CVCalendarMonthView.swift in Sources */,
 				010F95651D0A73C6006F9266 /* AddPlanViewController.swift in Sources */,
 				01D6FB8B1D091BC00086A940 /* CVCalendarViewDelegate.swift in Sources */,
@@ -533,6 +570,7 @@
 				01C4D62D1D08E8970079AD7D /* RollingFileLogger.swift in Sources */,
 				01C4D62E1D08E8970079AD7D /* TimeConstants.swift in Sources */,
 				01C4D61F1D08E88D0079AD7D /* StringExtensions.swift in Sources */,
+				010F95BB1D0ABB32006F9266 /* String-Extras.swift in Sources */,
 				01C4D61D1D08E88D0079AD7D /* NSStringExtensions.swift in Sources */,
 				01D6FB7D1D091BC00086A940 /* CVCalendarContentViewController.swift in Sources */,
 				01D6FB811D091BC00086A940 /* CVCalendarMenuView.swift in Sources */,
@@ -686,6 +724,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -702,6 +741,8 @@
 				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = gaoqinghua.cn.MemoryTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MemoryTool/MemoryTool-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -709,6 +750,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -725,6 +767,7 @@
 				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = gaoqinghua.cn.MemoryTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MemoryTool/MemoryTool-Bridging-Header.h";
 			};
 			name = Release;
 		};
