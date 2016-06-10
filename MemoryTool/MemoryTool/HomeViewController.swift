@@ -15,7 +15,9 @@ class HomeViewController: UIViewController, UINavigationControllerDelegate {
     private var calendarMenuView: CVCalendarMenuView!
     private var calendarView: CVCalendarView!
     private var monthLabel: UILabel!
-    private var selectedDay:DayView!
+    private var selectedDay: DayView!
+    private var addPlanBtn: UIButton!
+    var reviseDaysArray: [CVDate] = [CVDate]()
     
     var animationFinished = true
     //MARK: - 生命周期
@@ -48,7 +50,7 @@ class HomeViewController: UIViewController, UINavigationControllerDelegate {
         
         navigationItem.leftBarButtonItem = UIBarButtonItem.item("", title: "今日", target: self, action: #selector(HomeViewController.leftItemClick))
         navigationItem.rightBarButtonItem = UIBarButtonItem.item("naviItemRight", title: "", target: self, action: #selector(HomeViewController.rightItemClick))
-        monthLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
+        monthLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 150, height: 30))
         monthLabel.textColor = UIColor.darkGrayColor()
         monthLabel.textAlignment = .Center
         monthLabel.font = UIFont.boldSystemFontOfSize(20)
@@ -59,32 +61,24 @@ class HomeViewController: UIViewController, UINavigationControllerDelegate {
     func configUI() {
         let bgImage = UIImageView(image: UIImage(named: "homeBG"))
         view.addSubview(bgImage)
-        bgImage.snp_makeConstraints { (make) in
-            make.edges.equalTo(0)
-        }
+        log.debug("123")
+        bgImage.frame = view.frame
         
-        calendarMenuView = CVCalendarMenuView()
+        calendarMenuView = CVCalendarMenuView(frame: CGRect(x: 0, y: NavigationH + 10, width: SCREENW, height: 10))
         view.addSubview(calendarMenuView)
-        calendarMenuView.alpha = 0.8
         calendarMenuView.menuViewDelegate = self
-        calendarMenuView.snp_makeConstraints { (make) in
-            make.top.equalTo(NavigationH + 10)
-            make.width.equalTo(SCREENW)
-            make.height.equalTo(10)
-            make.centerX.equalTo(0)
-        }
         
-        calendarView = CVCalendarView()
+        calendarView = CVCalendarView(frame: CGRect(x: 0, y: NavigationH + 10 + calendarMenuView.height, width: SCREENW, height: 300))
         view.addSubview(calendarView)
-        calendarView.alpha = 0.8
         calendarView.calendarDelegate = self
         calendarView.calendarAppearanceDelegate = self
-        calendarView.snp_makeConstraints { (make) in
-            make.top.equalTo(calendarMenuView.snp_bottom).offset(5)
-            make.width.equalTo(SCREENW)
-            make.height.equalTo(350)
-            make.centerX.equalTo(calendarMenuView)
-        }
+        
+        addPlanBtn = UIButton(type: .Custom)
+        view.addSubview(addPlanBtn)
+        addPlanBtn.frame.origin = CGPoint(x: SCREENW - 50, y: SCREENH - 150)
+        addPlanBtn.sizeToFit()
+        addPlanBtn.setBackgroundImage(UIImage(named: "naviItemRight"), forState: .Normal)
+        addPlanBtn.addTarget(self, action: #selector(HomeViewController.addPlanBtnClick), forControlEvents: .TouchUpInside)
         
     }
     //MARK: - 点击事件
@@ -94,6 +88,11 @@ class HomeViewController: UIViewController, UINavigationControllerDelegate {
     
     func rightItemClick() {
         navigationController?.pushViewController(ReviseViewController(), animated: true)
+    }
+    
+    func addPlanBtnClick() {
+        let nav = UINavigationController(rootViewController: AddPlanViewController())
+        presentViewController(nav, animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -137,6 +136,10 @@ extension HomeViewController: CVCalendarViewDelegate, CVCalendarMenuViewDelegate
         return true
     }
     
+    func shouldAutoSelectDayOnMonthChange() -> Bool {
+        return false
+    }
+    
     func shouldAnimateResizing() -> Bool {
         return true // Default value is true
     }
@@ -144,50 +147,21 @@ extension HomeViewController: CVCalendarViewDelegate, CVCalendarMenuViewDelegate
     func didSelectDayView(dayView: CVCalendarDayView, animationDidFinish: Bool) {
         print("\(dayView.date.commonDescription) is selected!")
         selectedDay = dayView
+        //拿到数据源后刷新视图
     }
     
     func presentedDateUpdated(date: CVDate) {
-        if monthLabel.text != date.globalDescription && self.animationFinished {
-            let updatedMonthLabel = UILabel()
-            updatedMonthLabel.textColor = monthLabel.textColor
-            updatedMonthLabel.font = monthLabel.font
-            updatedMonthLabel.textAlignment = .Center
-            updatedMonthLabel.text = date.globalDescription
-            updatedMonthLabel.sizeToFit()
-            updatedMonthLabel.alpha = 0
-            updatedMonthLabel.center = CGPoint(x: self.monthLabel.center.x, y: self.monthLabel.center.y + 20)
-            
-            let offset = CGFloat(48)
-            updatedMonthLabel.transform = CGAffineTransformMakeTranslation(0, offset)
-            updatedMonthLabel.transform = CGAffineTransformMakeScale(1, 0.1)
-            
-            UIView.animateWithDuration(0.35, delay: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
-                self.animationFinished = false
-                self.monthLabel.transform = CGAffineTransformMakeTranslation(0, -offset)
-                self.monthLabel.transform = CGAffineTransformMakeScale(1, 0.1)
-                self.monthLabel.alpha = 0
-                
-                updatedMonthLabel.alpha = 1
-                updatedMonthLabel.transform = CGAffineTransformIdentity
-                
-            }) { _ in
-                
-                self.animationFinished = true
-                self.monthLabel.frame = updatedMonthLabel.frame
-                self.monthLabel.text = updatedMonthLabel.text
-                self.monthLabel.transform = CGAffineTransformIdentity
-                self.monthLabel.alpha = 1
-                updatedMonthLabel.removeFromSuperview()
-            }
-            
-            self.view.insertSubview(updatedMonthLabel, aboveSubview: self.monthLabel)
-        }
+        monthLabel.text = date.globalDescription
     }
     
     //哪些显示下部点标
     func dotMarker(shouldShowOnDayView dayView: CVCalendarDayView) -> Bool {
-        
-        return true
+//        for day in reviseDaysArray {
+//            if dayView.date == day {
+//                return true
+//            }
+//        }
+        return false
     }
     //点标颜色
     func dotMarker(colorOnDayView dayView: CVCalendarDayView) -> [UIColor] {

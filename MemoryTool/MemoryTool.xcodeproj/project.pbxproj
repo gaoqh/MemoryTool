@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		010F947A1D0A5960006F9266 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C4D65D1D08EEEC0079AD7D /* SnapKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		010F95651D0A73C6006F9266 /* AddPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010F95641D0A73C6006F9266 /* AddPlanViewController.swift */; };
 		014D44731D0979CD00561B78 /* ReviseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014D44721D0979CD00561B78 /* ReviseViewController.swift */; };
 		019203F81D086F16008F1F0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019203F71D086F16008F1F0C /* AppDelegate.swift */; };
 		019203FD1D086F16008F1F0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 019203FB1D086F16008F1F0C /* Main.storyboard */; };
@@ -27,15 +29,14 @@
 		01C4D62D1D08E8970079AD7D /* RollingFileLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C4D6281D08E8970079AD7D /* RollingFileLogger.swift */; };
 		01C4D62E1D08E8970079AD7D /* TimeConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C4D6291D08E8970079AD7D /* TimeConstants.swift */; };
 		01C4D6311D08E9910079AD7D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C4D6301D08E9910079AD7D /* HomeViewController.swift */; };
-		01C4D65A1D08EEE10079AD7D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C4D6591D08EEE10079AD7D /* Alamofire.framework */; };
+		01C4D65A1D08EEE10079AD7D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C4D6591D08EEE10079AD7D /* Alamofire.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		01C4D65B1D08EEE10079AD7D /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 01C4D6591D08EEE10079AD7D /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		01C4D6611D08EEEC0079AD7D /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C4D65D1D08EEEC0079AD7D /* SnapKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		01C4D6621D08EEEC0079AD7D /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 01C4D65D1D08EEEC0079AD7D /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		01C4D6631D08EEEC0079AD7D /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C4D65E1D08EEEC0079AD7D /* SVProgressHUD.framework */; };
+		01C4D6631D08EEEC0079AD7D /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C4D65E1D08EEEC0079AD7D /* SVProgressHUD.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		01C4D6641D08EEEC0079AD7D /* SVProgressHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 01C4D65E1D08EEEC0079AD7D /* SVProgressHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		01C4D6651D08EEEC0079AD7D /* WebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C4D65F1D08EEEC0079AD7D /* WebImage.framework */; };
+		01C4D6651D08EEEC0079AD7D /* WebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C4D65F1D08EEEC0079AD7D /* WebImage.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		01C4D6661D08EEEC0079AD7D /* WebImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 01C4D65F1D08EEEC0079AD7D /* WebImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		01C4D6671D08EEEC0079AD7D /* XCGLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C4D6601D08EEEC0079AD7D /* XCGLogger.framework */; };
+		01C4D6671D08EEEC0079AD7D /* XCGLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C4D6601D08EEEC0079AD7D /* XCGLogger.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		01C4D6681D08EEEC0079AD7D /* XCGLogger.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 01C4D6601D08EEEC0079AD7D /* XCGLogger.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		01D6FB7C1D091BC00086A940 /* CVAuxiliaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D6FB611D091BBF0086A940 /* CVAuxiliaryView.swift */; };
 		01D6FB7D1D091BC00086A940 /* CVCalendarContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D6FB621D091BBF0086A940 /* CVCalendarContentViewController.swift */; };
@@ -103,6 +104,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		010F95641D0A73C6006F9266 /* AddPlanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPlanViewController.swift; sourceTree = "<group>"; };
 		014D44721D0979CD00561B78 /* ReviseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviseViewController.swift; sourceTree = "<group>"; };
 		019203F41D086F16008F1F0C /* MemoryTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoryTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		019203F71D086F16008F1F0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -172,7 +174,7 @@
 				01C4D6671D08EEEC0079AD7D /* XCGLogger.framework in Frameworks */,
 				01C4D6631D08EEEC0079AD7D /* SVProgressHUD.framework in Frameworks */,
 				01C4D65A1D08EEE10079AD7D /* Alamofire.framework in Frameworks */,
-				01C4D6611D08EEEC0079AD7D /* SnapKit.framework in Frameworks */,
+				010F947A1D0A5960006F9266 /* SnapKit.framework in Frameworks */,
 				01C4D6651D08EEEC0079AD7D /* WebImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -194,11 +196,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		014D44751D0A517A00561B78 /* Revise */ = {
+			isa = PBXGroup;
+			children = (
+				014D44721D0979CD00561B78 /* ReviseViewController.swift */,
+			);
+			name = Revise;
+			sourceTree = "<group>";
+		};
 		019203EB1D086F16008F1F0C = {
 			isa = PBXGroup;
 			children = (
 				01D6FB5F1D091BBF0086A940 /* Dependencies */,
-				01C4D6691D08EEFD0079AD7D /* Frameworks */,
+				01C4D6691D08EEFD0079AD7D /* ThirdFrameworks */,
 				01C4D6241D08E8970079AD7D /* Utils */,
 				01C4D6111D08E88D0079AD7D /* Extensions */,
 				019203F61D086F16008F1F0C /* MemoryTool */,
@@ -221,6 +231,7 @@
 		019203F61D086F16008F1F0C /* MemoryTool */ = {
 			isa = PBXGroup;
 			children = (
+				014D44751D0A517A00561B78 /* Revise */,
 				01D6FB981D091D2C0086A940 /* Config */,
 				01C4D62F1D08E9790079AD7D /* Home */,
 				01C4D6101D08E8440079AD7D /* App */,
@@ -288,12 +299,12 @@
 			isa = PBXGroup;
 			children = (
 				01C4D6301D08E9910079AD7D /* HomeViewController.swift */,
-				014D44721D0979CD00561B78 /* ReviseViewController.swift */,
+				010F95641D0A73C6006F9266 /* AddPlanViewController.swift */,
 			);
 			name = Home;
 			sourceTree = "<group>";
 		};
-		01C4D6691D08EEFD0079AD7D /* Frameworks */ = {
+		01C4D6691D08EEFD0079AD7D /* ThirdFrameworks */ = {
 			isa = PBXGroup;
 			children = (
 				01C4D65D1D08EEEC0079AD7D /* SnapKit.framework */,
@@ -302,7 +313,7 @@
 				01C4D6601D08EEEC0079AD7D /* XCGLogger.framework */,
 				01C4D6591D08EEE10079AD7D /* Alamofire.framework */,
 			);
-			name = Frameworks;
+			name = ThirdFrameworks;
 			sourceTree = "<group>";
 		};
 		01D6FB5F1D091BBF0086A940 /* Dependencies */ = {
@@ -515,6 +526,7 @@
 				01D6FB941D091BC00086A940 /* CVSet.swift in Sources */,
 				01C4D62A1D08E8970079AD7D /* AppInfo.swift in Sources */,
 				01D6FB841D091BC00086A940 /* CVCalendarMonthView.swift in Sources */,
+				010F95651D0A73C6006F9266 /* AddPlanViewController.swift in Sources */,
 				01D6FB8B1D091BC00086A940 /* CVCalendarViewDelegate.swift in Sources */,
 				01D6FB891D091BC00086A940 /* CVCalendarViewAppearance.swift in Sources */,
 				01C4D61C1D08E88D0079AD7D /* NSFileManagerExtensions.swift in Sources */,
@@ -675,13 +687,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/SnapKit/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/SnapKit/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Checkouts/SnapKit/Carthage/Build/tvOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/SnapKit/Carthage/Build/watchOS",
 				);
 				INFOPLIST_FILE = MemoryTool/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = gaoqinghua.cn.MemoryTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -692,13 +710,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/SnapKit/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/SnapKit/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Checkouts/SnapKit/Carthage/Build/tvOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/SnapKit/Carthage/Build/watchOS",
 				);
 				INFOPLIST_FILE = MemoryTool/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = gaoqinghua.cn.MemoryTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
