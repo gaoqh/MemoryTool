@@ -18,3 +18,5 @@ public let TabBarH: CGFloat = 49
 public let SCREENW = UIScreen.mainScreen().bounds.size.width
 /// 屏幕高度
 public let SCREENH = UIScreen.mainScreen().bounds.size.height
+/// 主题颜色
+public let APP_COLOR_STATUSBAR = UIColor.whiteColor()

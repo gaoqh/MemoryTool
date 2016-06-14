@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         configLog()
         
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        let nav = UINavigationController(rootViewController: HomeViewController())
+        let nav = MainNavigationController(rootViewController: HomeViewController())
         window!.rootViewController = nav
         
         window!.makeKeyAndVisible()

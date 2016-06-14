@@ -12,8 +12,12 @@
 		010F95B91D0ABB32006F9266 /* SQLiteDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010F95B61D0ABB32006F9266 /* SQLiteDB.swift */; };
 		010F95BA1D0ABB32006F9266 /* SQLTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010F95B71D0ABB32006F9266 /* SQLTable.swift */; };
 		010F95BB1D0ABB32006F9266 /* String-Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010F95B81D0ABB32006F9266 /* String-Extras.swift */; };
-		010F95BE1D0AC0F3006F9266 /* DBTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010F95BD1D0AC0F3006F9266 /* DBTestViewController.swift */; };
 		010F95C01D0ADF9F006F9266 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 010F95BF1D0ADF9F006F9266 /* libsqlite3.0.tbd */; };
+		010F95C31D104136006F9266 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010F95C21D104136006F9266 /* MainNavigationController.swift */; };
+		010F95CB1D104CD4006F9266 /* ReviseContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010F95CA1D104CD4006F9266 /* ReviseContentController.swift */; };
+		010F95CD1D104D6C006F9266 /* CurveSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010F95CC1D104D6C006F9266 /* CurveSettingController.swift */; };
+		010F95D01D104E18006F9266 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010F95CE1D104E18006F9266 /* FeedbackViewController.swift */; };
+		010F95D11D104E18006F9266 /* FeedbackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 010F95CF1D104E18006F9266 /* FeedbackViewController.xib */; };
 		014D44731D0979CD00561B78 /* ReviseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014D44721D0979CD00561B78 /* ReviseViewController.swift */; };
 		019203F81D086F16008F1F0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019203F71D086F16008F1F0C /* AppDelegate.swift */; };
 		019203FD1D086F16008F1F0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 019203FB1D086F16008F1F0C /* Main.storyboard */; };
@@ -114,8 +118,12 @@
 		010F95B61D0ABB32006F9266 /* SQLiteDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteDB.swift; sourceTree = "<group>"; };
 		010F95B71D0ABB32006F9266 /* SQLTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLTable.swift; sourceTree = "<group>"; };
 		010F95B81D0ABB32006F9266 /* String-Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String-Extras.swift"; sourceTree = "<group>"; };
-		010F95BD1D0AC0F3006F9266 /* DBTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBTestViewController.swift; sourceTree = "<group>"; };
 		010F95BF1D0ADF9F006F9266 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		010F95C21D104136006F9266 /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		010F95CA1D104CD4006F9266 /* ReviseContentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviseContentController.swift; sourceTree = "<group>"; };
+		010F95CC1D104D6C006F9266 /* CurveSettingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurveSettingController.swift; sourceTree = "<group>"; };
+		010F95CE1D104E18006F9266 /* FeedbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
+		010F95CF1D104E18006F9266 /* FeedbackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedbackViewController.xib; sourceTree = "<group>"; };
 		014D44721D0979CD00561B78 /* ReviseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviseViewController.swift; sourceTree = "<group>"; };
 		019203F41D086F16008F1F0C /* MemoryTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoryTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		019203F71D086F16008F1F0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -221,15 +229,26 @@
 		010F95BC1D0AC0B7006F9266 /* SQLite */ = {
 			isa = PBXGroup;
 			children = (
-				010F95BD1D0AC0F3006F9266 /* DBTestViewController.swift */,
 			);
 			name = SQLite;
+			sourceTree = "<group>";
+		};
+		010F95C11D10410B006F9266 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				010F95C21D104136006F9266 /* MainNavigationController.swift */,
+			);
+			name = Main;
 			sourceTree = "<group>";
 		};
 		014D44751D0A517A00561B78 /* Revise */ = {
 			isa = PBXGroup;
 			children = (
 				014D44721D0979CD00561B78 /* ReviseViewController.swift */,
+				010F95CA1D104CD4006F9266 /* ReviseContentController.swift */,
+				010F95CC1D104D6C006F9266 /* CurveSettingController.swift */,
+				010F95CE1D104E18006F9266 /* FeedbackViewController.swift */,
+				010F95CF1D104E18006F9266 /* FeedbackViewController.xib */,
 			);
 			name = Revise;
 			sourceTree = "<group>";
@@ -263,6 +282,7 @@
 		019203F61D086F16008F1F0C /* MemoryTool */ = {
 			isa = PBXGroup;
 			children = (
+				010F95C11D10410B006F9266 /* Main */,
 				010F95BC1D0AC0B7006F9266 /* SQLite */,
 				014D44751D0A517A00561B78 /* Revise */,
 				01D6FB981D091D2C0086A940 /* Config */,
@@ -511,6 +531,7 @@
 				019204021D086F16008F1F0C /* LaunchScreen.storyboard in Resources */,
 				019203FF1D086F16008F1F0C /* Assets.xcassets in Resources */,
 				019203FD1D086F16008F1F0C /* Main.storyboard in Resources */,
+				010F95D11D104E18006F9266 /* FeedbackViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,15 +574,18 @@
 				010F95BA1D0ABB32006F9266 /* SQLTable.swift in Sources */,
 				01D6FB831D091BC00086A940 /* CVCalendarMonthContentViewController.swift in Sources */,
 				014D44731D0979CD00561B78 /* ReviseViewController.swift in Sources */,
+				010F95C31D104136006F9266 /* MainNavigationController.swift in Sources */,
+				010F95D01D104E18006F9266 /* FeedbackViewController.swift in Sources */,
 				01C4D61E1D08E88D0079AD7D /* NSURLExtensions.swift in Sources */,
+				010F95CD1D104D6C006F9266 /* CurveSettingController.swift in Sources */,
 				01C4D6221D08E88D0079AD7D /* UIImageExtension.swift in Sources */,
+				010F95CB1D104CD4006F9266 /* ReviseContentController.swift in Sources */,
 				01D6FB8C1D091BC00086A940 /* CVCalendarViewPresentationMode.swift in Sources */,
 				01D6FB861D091BC00086A940 /* CVCalendarView.swift in Sources */,
 				01C4D6311D08E9910079AD7D /* HomeViewController.swift in Sources */,
 				01D6FB821D091BC00086A940 /* CVCalendarMenuViewDelegate.swift in Sources */,
 				01D6FB941D091BC00086A940 /* CVSet.swift in Sources */,
 				01C4D62A1D08E8970079AD7D /* AppInfo.swift in Sources */,
-				010F95BE1D0AC0F3006F9266 /* DBTestViewController.swift in Sources */,
 				01D6FB841D091BC00086A940 /* CVCalendarMonthView.swift in Sources */,
 				010F95651D0A73C6006F9266 /* AddPlanViewController.swift in Sources */,
 				01D6FB8B1D091BC00086A940 /* CVCalendarViewDelegate.swift in Sources */,

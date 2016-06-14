@@ -94,9 +94,9 @@ class HomeViewController: UIViewController, UINavigationControllerDelegate {
     }
     
     func addPlanBtnClick() {
-//        let nav = UINavigationController(rootViewController: AddPlanViewController())
-//        presentViewController(nav, animated: true, completion: nil)
-        navigationController?.pushViewController(DBTestViewController(), animated: true)
+        let nav = UINavigationController(rootViewController: AddPlanViewController())
+        presentViewController(nav, animated: true, completion: nil)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -143,7 +143,7 @@ extension HomeViewController: CVCalendarViewDelegate, CVCalendarMenuViewDelegate
     }
     
     func shouldAutoSelectDayOnMonthChange() -> Bool {
-        return false
+        return true
     }
     
     func shouldAnimateResizing() -> Bool {
