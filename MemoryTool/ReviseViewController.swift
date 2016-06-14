@@ -42,11 +42,13 @@ class ReviseViewController: UIViewController {
     
     func setTableView() {
         automaticallyAdjustsScrollViewInsets = false
-        tableView = UITableView(frame: CGRectMake(0, NavigationH, SCREENW, SCREENH), style: UITableViewStyle.Grouped)
+        tableView = UITableView(frame: CGRectMake(0, NavigationH, SCREENW, SCREENH - NavigationH), style: UITableViewStyle.Grouped)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = 44
-        tableView.sectionFooterHeight = 0.1
+        tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: 0.1, height: 0.1))
+        tableView.sectionFooterHeight = 10
+        tableView.sectionHeaderHeight = 0
                 tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
         view.addSubview(tableView)
     }
@@ -55,6 +57,7 @@ class ReviseViewController: UIViewController {
 }
 
 extension ReviseViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
@@ -80,7 +83,7 @@ extension ReviseViewController: UITableViewDelegate, UITableViewDataSource {
                 label.font = UIFont.systemFontOfSize(10)
                 label.sizeToFit()
                 label.backgroundColor = UIColor.clearColor()
-                label.frame = CGRect(x: SCREENW - label.width - 25, y: 12, width: label.width, height: label.height)
+                label.frame = CGRect(x: SCREENW - label.width - 50, y: ((cell?.height)! - label.height) * 0.5, width: label.width, height: label.height)
                 cell?.contentView.addSubview(label)
                 label.textColor = UIColor.grayColor()
             case 2:
