@@ -64,11 +64,14 @@ class HomeViewController: UIViewController, UINavigationControllerDelegate {
     func configUI() {
         let bgImage = UIImageView(image: UIImage(named: "homeBG"))
         view.addSubview(bgImage)
-        log.debug("123")
+        bgImage.snp_makeConstraints { (make) in
+            make.top.equalTo(10)
+        }
         bgImage.frame = view.frame
         
         calendarMenuView = CVCalendarMenuView(frame: CGRect(x: 0, y: NavigationH + 10, width: SCREENW, height: 10))
         view.addSubview(calendarMenuView)
+        
         calendarMenuView.menuViewDelegate = self
         
         calendarView = CVCalendarView(frame: CGRect(x: 0, y: NavigationH + 10 + calendarMenuView.height, width: SCREENW, height: 300))

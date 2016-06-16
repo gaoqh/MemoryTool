@@ -12,6 +12,7 @@ import UIKit
 
 /// 顶部导航条高度
 public let NavigationH: CGFloat = 64
+public let StatusBarH: CGFloat = 20
 /// 底部tabBar高度
 public let TabBarH: CGFloat = 49
 /// 屏幕宽度
@@ -20,3 +21,8 @@ public let SCREENW = UIScreen.mainScreen().bounds.size.width
 public let SCREENH = UIScreen.mainScreen().bounds.size.height
 /// 主题颜色
 public let APP_COLOR_STATUSBAR = UIColor.whiteColor()
+
+public func APP_FONT(fontSize: CGFloat) -> UIFont{
+    return UIFont.systemFontOfSize(fontSize)
+}
+
