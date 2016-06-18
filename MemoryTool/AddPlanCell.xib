@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="AddPlanCell" customModule="MemoryTool" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="68.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hB2-pF-1Wc">
+                        <rect key="frame" x="18" y="17" width="40" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="NV6-E5-wDb"/>
+                        </constraints>
+                    </imageView>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SHQ-Wz-oGu">
+                        <rect key="frame" x="66" y="20" width="246" height="30"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="hB2-pF-1Wc" secondAttribute="bottom" constant="8.5" id="EjW-1L-FAf"/>
+                    <constraint firstItem="hB2-pF-1Wc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="fZZ-co-SJ3"/>
+                    <constraint firstItem="hB2-pF-1Wc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="9" id="ogP-EW-Jgh"/>
+                    <constraint firstItem="SHQ-Wz-oGu" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="wPv-a3-Sk1"/>
+                    <constraint firstItem="SHQ-Wz-oGu" firstAttribute="leading" secondItem="hB2-pF-1Wc" secondAttribute="trailing" constant="8" id="xgf-um-jfS"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="SHQ-Wz-oGu" secondAttribute="trailing" id="yRD-mX-den"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="contentTextField" destination="SHQ-Wz-oGu" id="0d6-tQ-2pF"/>
+                <outlet property="numImageView" destination="hB2-pF-1Wc" id="ywA-g0-hUE"/>
+            </connections>
+            <point key="canvasLocation" x="182" y="212.5"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		010F947A1D0A5960006F9266 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C4D65D1D08EEEC0079AD7D /* SnapKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		010F95651D0A73C6006F9266 /* AddPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010F95641D0A73C6006F9266 /* AddPlanViewController.swift */; };
 		010F95C01D0ADF9F006F9266 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 010F95BF1D0ADF9F006F9266 /* libsqlite3.0.tbd */; };
 		010F95C31D104136006F9266 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010F95C21D104136006F9266 /* MainNavigationController.swift */; };
@@ -19,6 +18,13 @@
 		0114F6721D129A490074E3C7 /* ReviseContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0114F6701D129A490074E3C7 /* ReviseContentCell.swift */; };
 		0114F6731D129A490074E3C7 /* ReviseContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0114F6711D129A490074E3C7 /* ReviseContentCell.xib */; };
 		014D44731D0979CD00561B78 /* ReviseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014D44721D0979CD00561B78 /* ReviseViewController.swift */; };
+		018A50331D13E34700365B1F /* FMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018A50321D13E34700365B1F /* FMDB.framework */; };
+		018A50341D13E34700365B1F /* FMDB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 018A50321D13E34700365B1F /* FMDB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		018A503C1D13FF8900365B1F /* UITextFieldExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018A503B1D13FF8900365B1F /* UITextFieldExtensions.swift */; };
+		018A50CF1D1418D600365B1F /* SnapKit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 018A50C01D1418A700365B1F /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		018A50F51D1550FC00365B1F /* XCGLogger.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 018A50E81D1550EB00365B1F /* XCGLogger.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		018A51041D1555EA00365B1F /* AddPlanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018A51021D1555EA00365B1F /* AddPlanCell.swift */; };
+		018A51051D1555EA00365B1F /* AddPlanCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 018A51031D1555EA00365B1F /* AddPlanCell.xib */; };
 		019203F81D086F16008F1F0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019203F71D086F16008F1F0C /* AppDelegate.swift */; };
 		019203FD1D086F16008F1F0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 019203FB1D086F16008F1F0C /* Main.storyboard */; };
 		019203FF1D086F16008F1F0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 019203FE1D086F16008F1F0C /* Assets.xcassets */; };
@@ -40,7 +46,6 @@
 		01C4D6311D08E9910079AD7D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C4D6301D08E9910079AD7D /* HomeViewController.swift */; };
 		01C4D65A1D08EEE10079AD7D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C4D6591D08EEE10079AD7D /* Alamofire.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		01C4D65B1D08EEE10079AD7D /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 01C4D6591D08EEE10079AD7D /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		01C4D6621D08EEEC0079AD7D /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 01C4D65D1D08EEEC0079AD7D /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		01C4D6631D08EEEC0079AD7D /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C4D65E1D08EEEC0079AD7D /* SVProgressHUD.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		01C4D6641D08EEEC0079AD7D /* SVProgressHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 01C4D65E1D08EEEC0079AD7D /* SVProgressHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		01C4D6651D08EEEC0079AD7D /* WebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C4D65F1D08EEEC0079AD7D /* WebImage.framework */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -78,6 +83,111 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		018A50BF1D1418A700365B1F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 018A50B51D1418A600365B1F /* SnapKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EEBCC9D819CC627D0083B827;
+			remoteInfo = "SnapKit iOS";
+		};
+		018A50C11D1418A700365B1F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 018A50B51D1418A600365B1F /* SnapKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 537DCE921C35CC8800B5B899;
+			remoteInfo = "SnapKit tvOS";
+		};
+		018A50C31D1418A700365B1F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 018A50B51D1418A600365B1F /* SnapKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EECDB37A1AC0C9D4006BBC11;
+			remoteInfo = "SnapKit OSX";
+		};
+		018A50C51D1418A700365B1F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 018A50B51D1418A600365B1F /* SnapKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EEBCC9E219CC627E0083B827;
+			remoteInfo = "SnapKit iOS Tests";
+		};
+		018A50C71D1418A700365B1F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 018A50B51D1418A600365B1F /* SnapKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 537DCEAF1C35D90A00B5B899;
+			remoteInfo = "SnapKit tvOS Tests";
+		};
+		018A50C91D1418A700365B1F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 018A50B51D1418A600365B1F /* SnapKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EECDB3841AC0C9D4006BBC11;
+			remoteInfo = "SnapKit OSX Tests";
+		};
+		018A50CB1D1418A700365B1F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 018A50B51D1418A600365B1F /* SnapKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 56A0DC091C859E30005973AB;
+			remoteInfo = "Example-iOS";
+		};
+		018A50CD1D1418C800365B1F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 018A50B51D1418A600365B1F /* SnapKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = EEBCC9D719CC627D0083B827;
+			remoteInfo = "SnapKit iOS";
+		};
+		018A50E71D1550EB00365B1F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 018A50DE1D1550EB00365B1F /* XCGLogger.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 55E3EE4519D76F280068C3A7;
+			remoteInfo = "XCGLogger (iOS)";
+		};
+		018A50E91D1550EB00365B1F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 018A50DE1D1550EB00365B1F /* XCGLogger.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 554DF41719D76FE7005708BE;
+			remoteInfo = "XCGLogger (OS X)";
+		};
+		018A50EB1D1550EB00365B1F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 018A50DE1D1550EB00365B1F /* XCGLogger.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 70CB94201B99E728007802FF;
+			remoteInfo = "XCGLogger (watchOS)";
+		};
+		018A50ED1D1550EB00365B1F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 018A50DE1D1550EB00365B1F /* XCGLogger.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5515A3DF1BA119FA0047BA31;
+			remoteInfo = "XCGLogger (tvOS)";
+		};
+		018A50EF1D1550EB00365B1F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 018A50DE1D1550EB00365B1F /* XCGLogger.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 55E3EE5019D76F280068C3A7;
+			remoteInfo = "XCGLoggerTests (iOS)";
+		};
+		018A50F11D1550EB00365B1F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 018A50DE1D1550EB00365B1F /* XCGLogger.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 55BB1F011B79DC7500709779;
+			remoteInfo = "XCGLoggerTests (OS X)";
+		};
+		018A50F31D1550F600365B1F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 018A50DE1D1550EB00365B1F /* XCGLogger.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 55E3EE4419D76F280068C3A7;
+			remoteInfo = "XCGLogger (iOS)";
+		};
 		019204091D086F16008F1F0C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 019203EC1D086F16008F1F0C /* Project object */;
@@ -95,6 +205,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		018A50B31D1417DA00365B1F /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				018A50F51D1550FC00365B1F /* XCGLogger.framework in Copy Frameworks */,
+				018A50CF1D1418D600365B1F /* SnapKit.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		01C4D65C1D08EEE10079AD7D /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 12;
@@ -102,9 +224,9 @@
 			dstSubfolderSpec = 10;
 			files = (
 				01C4D6681D08EEEC0079AD7D /* XCGLogger.framework in Embed Frameworks */,
+				018A50341D13E34700365B1F /* FMDB.framework in Embed Frameworks */,
 				01C4D6641D08EEEC0079AD7D /* SVProgressHUD.framework in Embed Frameworks */,
 				01C4D65B1D08EEE10079AD7D /* Alamofire.framework in Embed Frameworks */,
-				01C4D6621D08EEEC0079AD7D /* SnapKit.framework in Embed Frameworks */,
 				01C4D6661D08EEEC0079AD7D /* WebImage.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -125,6 +247,12 @@
 		0114F6701D129A490074E3C7 /* ReviseContentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviseContentCell.swift; sourceTree = "<group>"; };
 		0114F6711D129A490074E3C7 /* ReviseContentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReviseContentCell.xib; sourceTree = "<group>"; };
 		014D44721D0979CD00561B78 /* ReviseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviseViewController.swift; sourceTree = "<group>"; };
+		018A50321D13E34700365B1F /* FMDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FMDB.framework; path = Carthage/Build/iOS/FMDB.framework; sourceTree = "<group>"; };
+		018A503B1D13FF8900365B1F /* UITextFieldExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldExtensions.swift; sourceTree = "<group>"; };
+		018A50B51D1418A600365B1F /* SnapKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SnapKit.xcodeproj; path = SnapKit/SnapKit.xcodeproj; sourceTree = "<group>"; };
+		018A50DE1D1550EB00365B1F /* XCGLogger.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = XCGLogger.xcodeproj; path = XCGLogger/XCGLogger/Library/XCGLogger.xcodeproj; sourceTree = "<group>"; };
+		018A51021D1555EA00365B1F /* AddPlanCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPlanCell.swift; sourceTree = "<group>"; };
+		018A51031D1555EA00365B1F /* AddPlanCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddPlanCell.xib; sourceTree = "<group>"; };
 		019203F41D086F16008F1F0C /* MemoryTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoryTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		019203F71D086F16008F1F0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		019203FC1D086F16008F1F0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -151,7 +279,6 @@
 		01C4D6291D08E8970079AD7D /* TimeConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeConstants.swift; sourceTree = "<group>"; };
 		01C4D6301D08E9910079AD7D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		01C4D6591D08EEE10079AD7D /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		01C4D65D1D08EEEC0079AD7D /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		01C4D65E1D08EEEC0079AD7D /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = "<group>"; };
 		01C4D65F1D08EEEC0079AD7D /* WebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebImage.framework; path = Carthage/Build/iOS/WebImage.framework; sourceTree = "<group>"; };
 		01C4D6601D08EEEC0079AD7D /* XCGLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCGLogger.framework; path = Carthage/Build/iOS/XCGLogger.framework; sourceTree = "<group>"; };
@@ -194,7 +321,7 @@
 				01C4D6671D08EEEC0079AD7D /* XCGLogger.framework in Frameworks */,
 				01C4D6631D08EEEC0079AD7D /* SVProgressHUD.framework in Frameworks */,
 				01C4D65A1D08EEE10079AD7D /* Alamofire.framework in Frameworks */,
-				010F947A1D0A5960006F9266 /* SnapKit.framework in Frameworks */,
+				018A50331D13E34700365B1F /* FMDB.framework in Frameworks */,
 				01C4D6651D08EEEC0079AD7D /* WebImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,10 +372,46 @@
 			name = Revise;
 			sourceTree = "<group>";
 		};
+		018A50B61D1418A600365B1F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				018A50C01D1418A700365B1F /* SnapKit.framework */,
+				018A50C21D1418A700365B1F /* SnapKit.framework */,
+				018A50C41D1418A700365B1F /* SnapKit.framework */,
+				018A50C61D1418A700365B1F /* SnapKit iOS Tests.xctest */,
+				018A50C81D1418A700365B1F /* SnapKit tvOS Tests.xctest */,
+				018A50CA1D1418A700365B1F /* SnapKit OSX Tests.xctest */,
+				018A50CC1D1418A700365B1F /* Example-iOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		018A50D71D14195100365B1F /* AThirdProjects */ = {
+			isa = PBXGroup;
+			children = (
+				018A50DE1D1550EB00365B1F /* XCGLogger.xcodeproj */,
+				018A50B51D1418A600365B1F /* SnapKit.xcodeproj */,
+			);
+			name = AThirdProjects;
+			sourceTree = "<group>";
+		};
+		018A50DF1D1550EB00365B1F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				018A50E81D1550EB00365B1F /* XCGLogger.framework */,
+				018A50EA1D1550EB00365B1F /* XCGLogger.framework */,
+				018A50EC1D1550EB00365B1F /* XCGLogger.framework */,
+				018A50EE1D1550EB00365B1F /* XCGLogger.framework */,
+				018A50F01D1550EB00365B1F /* XCGLoggerTests (iOS).xctest */,
+				018A50F21D1550EB00365B1F /* XCGLoggerTests (OS X).xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		019203EB1D086F16008F1F0C = {
 			isa = PBXGroup;
 			children = (
-				010F95BF1D0ADF9F006F9266 /* libsqlite3.0.tbd */,
+				018A50D71D14195100365B1F /* AThirdProjects */,
 				01D6FB5F1D091BBF0086A940 /* Dependencies */,
 				01C4D6691D08EEFD0079AD7D /* ThirdFrameworks */,
 				01C4D6241D08E8970079AD7D /* Utils */,
@@ -317,6 +480,7 @@
 		01C4D6111D08E88D0079AD7D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				018A503B1D13FF8900365B1F /* UITextFieldExtensions.swift */,
 				01C4D6131D08E88D0079AD7D /* NSFileManagerExtensions.swift */,
 				01C4D6141D08E88D0079AD7D /* NSStringExtensions.swift */,
 				01C4D6151D08E88D0079AD7D /* NSURLExtensions.swift */,
@@ -346,6 +510,8 @@
 			children = (
 				01C4D6301D08E9910079AD7D /* HomeViewController.swift */,
 				010F95641D0A73C6006F9266 /* AddPlanViewController.swift */,
+				018A51021D1555EA00365B1F /* AddPlanCell.swift */,
+				018A51031D1555EA00365B1F /* AddPlanCell.xib */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -353,7 +519,7 @@
 		01C4D6691D08EEFD0079AD7D /* ThirdFrameworks */ = {
 			isa = PBXGroup;
 			children = (
-				01C4D65D1D08EEEC0079AD7D /* SnapKit.framework */,
+				018A50321D13E34700365B1F /* FMDB.framework */,
 				01C4D65E1D08EEEC0079AD7D /* SVProgressHUD.framework */,
 				01C4D65F1D08EEEC0079AD7D /* WebImage.framework */,
 				01C4D6601D08EEEC0079AD7D /* XCGLogger.framework */,
@@ -365,6 +531,7 @@
 		01D6FB5F1D091BBF0086A940 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				010F95BF1D0ADF9F006F9266 /* libsqlite3.0.tbd */,
 				01D6FB601D091BBF0086A940 /* CVCalendar */,
 			);
 			path = Dependencies;
@@ -423,10 +590,13 @@
 				019203F11D086F16008F1F0C /* Frameworks */,
 				019203F21D086F16008F1F0C /* Resources */,
 				01C4D65C1D08EEE10079AD7D /* Embed Frameworks */,
+				018A50B31D1417DA00365B1F /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				018A50F41D1550F600365B1F /* PBXTargetDependency */,
+				018A50CE1D1418C800365B1F /* PBXTargetDependency */,
 			);
 			name = MemoryTool;
 			productName = MemoryTool;
@@ -506,6 +676,16 @@
 			mainGroup = 019203EB1D086F16008F1F0C;
 			productRefGroup = 019203F51D086F16008F1F0C /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 018A50B61D1418A600365B1F /* Products */;
+					ProjectRef = 018A50B51D1418A600365B1F /* SnapKit.xcodeproj */;
+				},
+				{
+					ProductGroup = 018A50DF1D1550EB00365B1F /* Products */;
+					ProjectRef = 018A50DE1D1550EB00365B1F /* XCGLogger.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				019203F31D086F16008F1F0C /* MemoryTool */,
@@ -515,11 +695,106 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		018A50C01D1418A700365B1F /* SnapKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SnapKit.framework;
+			remoteRef = 018A50BF1D1418A700365B1F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		018A50C21D1418A700365B1F /* SnapKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SnapKit.framework;
+			remoteRef = 018A50C11D1418A700365B1F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		018A50C41D1418A700365B1F /* SnapKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SnapKit.framework;
+			remoteRef = 018A50C31D1418A700365B1F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		018A50C61D1418A700365B1F /* SnapKit iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SnapKit iOS Tests.xctest";
+			remoteRef = 018A50C51D1418A700365B1F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		018A50C81D1418A700365B1F /* SnapKit tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SnapKit tvOS Tests.xctest";
+			remoteRef = 018A50C71D1418A700365B1F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		018A50CA1D1418A700365B1F /* SnapKit OSX Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SnapKit OSX Tests.xctest";
+			remoteRef = 018A50C91D1418A700365B1F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		018A50CC1D1418A700365B1F /* Example-iOS.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Example-iOS.app";
+			remoteRef = 018A50CB1D1418A700365B1F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		018A50E81D1550EB00365B1F /* XCGLogger.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = XCGLogger.framework;
+			remoteRef = 018A50E71D1550EB00365B1F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		018A50EA1D1550EB00365B1F /* XCGLogger.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = XCGLogger.framework;
+			remoteRef = 018A50E91D1550EB00365B1F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		018A50EC1D1550EB00365B1F /* XCGLogger.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = XCGLogger.framework;
+			remoteRef = 018A50EB1D1550EB00365B1F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		018A50EE1D1550EB00365B1F /* XCGLogger.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = XCGLogger.framework;
+			remoteRef = 018A50ED1D1550EB00365B1F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		018A50F01D1550EB00365B1F /* XCGLoggerTests (iOS).xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "XCGLoggerTests (iOS).xctest";
+			remoteRef = 018A50EF1D1550EB00365B1F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		018A50F21D1550EB00365B1F /* XCGLoggerTests (OS X).xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "XCGLoggerTests (OS X).xctest";
+			remoteRef = 018A50F11D1550EB00365B1F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		019203F21D086F16008F1F0C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				018A51051D1555EA00365B1F /* AddPlanCell.xib in Resources */,
 				019204021D086F16008F1F0C /* LaunchScreen.storyboard in Resources */,
 				019203FF1D086F16008F1F0C /* Assets.xcassets in Resources */,
 				019203FD1D086F16008F1F0C /* Main.storyboard in Resources */,
@@ -564,6 +839,7 @@
 				01D6FB871D091BC00086A940 /* CVCalendarViewAnimator.swift in Sources */,
 				01D6FB851D091BC00086A940 /* CVCalendarTouchController.swift in Sources */,
 				01D6FB831D091BC00086A940 /* CVCalendarMonthContentViewController.swift in Sources */,
+				018A503C1D13FF8900365B1F /* UITextFieldExtensions.swift in Sources */,
 				014D44731D0979CD00561B78 /* ReviseViewController.swift in Sources */,
 				010F95C31D104136006F9266 /* MainNavigationController.swift in Sources */,
 				010F95D01D104E18006F9266 /* FeedbackViewController.swift in Sources */,
@@ -576,6 +852,7 @@
 				01C4D6311D08E9910079AD7D /* HomeViewController.swift in Sources */,
 				01D6FB821D091BC00086A940 /* CVCalendarMenuViewDelegate.swift in Sources */,
 				01D6FB941D091BC00086A940 /* CVSet.swift in Sources */,
+				018A51041D1555EA00365B1F /* AddPlanCell.swift in Sources */,
 				01C4D62A1D08E8970079AD7D /* AppInfo.swift in Sources */,
 				01D6FB841D091BC00086A940 /* CVCalendarMonthView.swift in Sources */,
 				010F95651D0A73C6006F9266 /* AddPlanViewController.swift in Sources */,
@@ -621,6 +898,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		018A50CE1D1418C800365B1F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SnapKit iOS";
+			targetProxy = 018A50CD1D1418C800365B1F /* PBXContainerItemProxy */;
+		};
+		018A50F41D1550F600365B1F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "XCGLogger (iOS)";
+			targetProxy = 018A50F31D1550F600365B1F /* PBXContainerItemProxy */;
+		};
 		0192040A1D086F16008F1F0C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 019203F31D086F16008F1F0C /* MemoryTool */;
@@ -739,22 +1026,20 @@
 		0192041D1D086F16008F1F0C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				EXECUTABLE_PREFIX = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/SnapKit/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/SnapKit/Carthage/Build/Mac",
-					"$(PROJECT_DIR)/Carthage/Checkouts/SnapKit/Carthage/Build/tvOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/SnapKit/Carthage/Build/watchOS",
 				);
 				INFOPLIST_FILE = MemoryTool/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = gaoqinghua.cn.MemoryTool.debug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -767,22 +1052,20 @@
 		0192041E1D086F16008F1F0C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				EXECUTABLE_PREFIX = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/SnapKit/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/SnapKit/Carthage/Build/Mac",
-					"$(PROJECT_DIR)/Carthage/Checkouts/SnapKit/Carthage/Build/tvOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/SnapKit/Carthage/Build/watchOS",
 				);
 				INFOPLIST_FILE = MemoryTool/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = gaoqinghua.cn.MemoryTool.debug;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -21,6 +21,8 @@ public let SCREENW = UIScreen.mainScreen().bounds.size.width
 public let SCREENH = UIScreen.mainScreen().bounds.size.height
 /// 主题颜色
 public let APP_COLOR_STATUSBAR = UIColor.whiteColor()
+/// 首页导航条颜色
+public let homeColor = RGB(r: 255, g: 255, b: 255, alpha: 3)
 
 public func APP_FONT(fontSize: CGFloat) -> UIFont{
     return UIFont.systemFontOfSize(fontSize)

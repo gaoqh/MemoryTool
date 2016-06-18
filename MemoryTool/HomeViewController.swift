@@ -9,6 +9,8 @@
 import UIKit
 import XCGLogger
 import SnapKit
+import WebImage
+import FMDB
 
 class HomeViewController: UIViewController, UINavigationControllerDelegate {
     //MARK: - 属性
@@ -17,6 +19,7 @@ class HomeViewController: UIViewController, UINavigationControllerDelegate {
     private var monthLabel: UILabel!
     private var selectedDay: DayView!
     private var addPlanBtn: UIButton!
+    
     //数据源
     var reviseDaysArray: [CVDate] = [CVDate]()
 
@@ -28,7 +31,6 @@ class HomeViewController: UIViewController, UINavigationControllerDelegate {
 
         setNav()
         configUI()
-        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -47,10 +49,13 @@ class HomeViewController: UIViewController, UINavigationControllerDelegate {
         calendarMenuView.commitMenuViewUpdate()
         calendarView.commitCalendarViewUpdate()
     }
+    
     //MARK: - 设置UI
     func setNav() {
         navigationController?.delegate = self
-        
+        //        [self.navigationItem.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:18],NSForegroundColorAttributeName:[UIColor blueColor]} forState:UIControlStateNormal]; 
+        navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont.systemFontOfSize(18), NSForegroundColorAttributeName: homeColor]
+//        navigationController?.navigationBar.tintColor = homeColor
         navigationItem.leftBarButtonItem = UIBarButtonItem.item("", title: "今日", target: self, action: #selector(HomeViewController.leftItemClick))
         navigationItem.rightBarButtonItem = UIBarButtonItem.item("naviItemRight", title: "", target: self, action: #selector(HomeViewController.rightItemClick))
         monthLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 150, height: 30))
@@ -64,26 +69,37 @@ class HomeViewController: UIViewController, UINavigationControllerDelegate {
     func configUI() {
         let bgImage = UIImageView(image: UIImage(named: "homeBG"))
         view.addSubview(bgImage)
-        bgImage.snp_makeConstraints { (make) in
-            make.top.equalTo(10)
-        }
         bgImage.frame = view.frame
         
-        calendarMenuView = CVCalendarMenuView(frame: CGRect(x: 0, y: NavigationH + 10, width: SCREENW, height: 10))
+        calendarMenuView = CVCalendarMenuView()
         view.addSubview(calendarMenuView)
-        
+        calendarMenuView.snp_makeConstraints { (make) in
+            make.top.equalTo(NavigationH)
+            make.left.right.equalTo(0)
+            make.height.equalTo(40)
+        }
+        calendarMenuView.backgroundColor = homeColor
         calendarMenuView.menuViewDelegate = self
         
-        calendarView = CVCalendarView(frame: CGRect(x: 0, y: NavigationH + 10 + calendarMenuView.height, width: SCREENW, height: 300))
+        calendarView = CVCalendarView()
         view.addSubview(calendarView)
+        calendarView.snp_makeConstraints { (make) in
+            make.left.right.equalTo(0)
+            make.top.equalTo(calendarMenuView.snp_bottom).offset(10)
+            make.height.equalTo(300)
+        }
         calendarView.calendarDelegate = self
         calendarView.calendarAppearanceDelegate = self
         
         addPlanBtn = UIButton(type: .Custom)
         view.addSubview(addPlanBtn)
-        addPlanBtn.frame.origin = CGPoint(x: SCREENW - 50, y: SCREENH - 150)
         addPlanBtn.sizeToFit()
-        addPlanBtn.setBackgroundImage(UIImage(named: "naviItemRight"), forState: .Normal)
+        addPlanBtn.snp_makeConstraints { (make) in
+            make.centerX.equalTo(0)
+            make.bottom.equalTo(view.snp_bottom).inset(6)
+        }
+        
+        addPlanBtn.setBackgroundImage(UIImage(named: "homeAdd"), forState: .Normal)
         addPlanBtn.addTarget(self, action: #selector(HomeViewController.addPlanBtnClick), forControlEvents: .TouchUpInside)
         
     }
@@ -111,23 +127,23 @@ class HomeViewController: UIViewController, UINavigationControllerDelegate {
     
     //MARK: - UINavigationDelegate
     //隐藏导航条的背景
-    func navigationController(navigationController: UINavigationController, willShowViewController viewController: UIViewController, animated: Bool) {
-        if viewController === self {
-            for view in navigationController.navigationBar.subviews {
-                if view.isKindOfClass(NSClassFromString("_UINavigationBarBackground")!) {
-                    view.hidden = true
-                }
-                
-            }
-        }else {
-            for view in navigationController.navigationBar.subviews {
-                if view.isKindOfClass(NSClassFromString("_UINavigationBarBackground")!) {
-                    view.hidden = false
-                    
-                }
-            }
-        }
-    }
+//    func navigationController(navigationController: UINavigationController, willShowViewController viewController: UIViewController, animated: Bool) {
+//        if viewController === self {
+//            for view in navigationController.navigationBar.subviews {
+//                if view.isKindOfClass(NSClassFromString("_UINavigationBarBackground")!) {
+//                    view.hidden = true
+//                }
+//                
+//            }
+//        }else {
+//            for view in navigationController.navigationBar.subviews {
+//                if view.isKindOfClass(NSClassFromString("_UINavigationBarBackground")!) {
+//                    view.hidden = false
+//                    
+//                }
+//            }
+//        }
+//    }
 
 
 }

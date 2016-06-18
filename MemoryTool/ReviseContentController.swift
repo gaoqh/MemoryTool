@@ -13,7 +13,7 @@ class ReviseContentController: UIViewController {
     //MARK: 常量
     let searchBtnMargin: CGFloat = 15
     let searchBtnH: CGFloat = 44
-    //首页cell标识
+    //cell标识
     let REVISE_CONTENT_CELL_ID = "revise_content_cell_id"
     //MARK: UI控件
     private var searchBtn: NoHighlightButton!

@@ -15,6 +15,15 @@ private struct Color {
     var blue: CGFloat
 };
 
+/**
+ 根据rgb值快速构造UIColor对象
+ */
+public func RGB(r r: CGFloat,g: CGFloat, b: CGFloat, alpha: CGFloat) -> UIColor {
+    
+    return UIColor(red: r/255, green: g/255, blue: b/255, alpha: alpha/100)
+}
+
+
 extension UIColor {
     /**
      * 16进制初始化UIColor.0xff5577
@@ -25,6 +34,14 @@ extension UIColor {
             green: CGFloat((rgb & 0x00FF00) >> 8)  / 255.0,
             blue:  CGFloat((rgb & 0x0000FF) >> 0)  / 255.0,
             alpha: 1)
+    }
+    
+    public convenience init(rgb: Int, alpha: Int) {
+        self.init(
+            red:   CGFloat((rgb & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgb & 0x00FF00) >> 8)  / 255.0,
+            blue:  CGFloat((rgb & 0x0000FF) >> 0)  / 255.0,
+            alpha: CGFloat(alpha / 100))
     }
 
     public convenience init(colorString: String) {

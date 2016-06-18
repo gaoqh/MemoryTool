@@ -1,5 +1,6 @@
-github "Alamofire/Alamofire" "3.4.0"
+github "Alamofire/Alamofire" "3.4.1"
 github "rs/SDWebImage" "3.8.1"
 github "SVProgressHUD/SVProgressHUD" "2.0.3"
 github "SnapKit/SnapKit" "0.21.0"
 github "DaveWoodCom/XCGLogger" "Version_3.3"
+github "ccgus/fmdb" "2.6.2"

@@ -31,6 +31,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //配置全局log
         configLog()
+
+        
+    
         
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         let nav = MainNavigationController(rootViewController: HomeViewController())
