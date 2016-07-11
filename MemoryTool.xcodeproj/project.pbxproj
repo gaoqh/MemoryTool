@@ -72,7 +72,8 @@
 		01A8E7E21D32016700EA697F /* PhotoViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A8E7E01D32016700EA697F /* PhotoViewCell.xib */; };
 		01A8E7E81D321C5D00EA697F /* DACircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A8E7E51D321C5D00EA697F /* DACircularProgressView.m */; };
 		01A8E7E91D321C5D00EA697F /* DALabeledCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A8E7E71D321C5D00EA697F /* DALabeledCircularProgressView.m */; };
-		01A8EB501D32747800EA697F /* GPUImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 01A8EB4E1D32747800EA697F /* GPUImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		01A8EB561D33E77100EA697F /* ImagePicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01A8EB551D33E77100EA697F /* ImagePicker.framework */; };
+		01A8EB571D33E77100EA697F /* ImagePicker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 01A8EB551D33E77100EA697F /* ImagePicker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		01C4D61C1D08E88D0079AD7D /* NSFileManagerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C4D6131D08E88D0079AD7D /* NSFileManagerExtensions.swift */; };
 		01C4D61D1D08E88D0079AD7D /* NSStringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C4D6141D08E88D0079AD7D /* NSStringExtensions.swift */; };
 		01C4D61E1D08E88D0079AD7D /* NSURLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C4D6151D08E88D0079AD7D /* NSURLExtensions.swift */; };
@@ -223,13 +224,6 @@
 			remoteGlobalIDString = 55BB1F011B79DC7500709779;
 			remoteInfo = "XCGLoggerTests (OS X)";
 		};
-		018A50F31D1550F600365B1F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 018A50DE1D1550EB00365B1F /* XCGLogger.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 55E3EE4419D76F280068C3A7;
-			remoteInfo = "XCGLogger (iOS)";
-		};
 		019204091D086F16008F1F0C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 019203EC1D086F16008F1F0C /* Project object */;
@@ -308,10 +302,10 @@
 			files = (
 				01C4D6681D08EEEC0079AD7D /* XCGLogger.framework in Embed Frameworks */,
 				018A50341D13E34700365B1F /* FMDB.framework in Embed Frameworks */,
+				01A8EB571D33E77100EA697F /* ImagePicker.framework in Embed Frameworks */,
 				01C4D6641D08EEEC0079AD7D /* SVProgressHUD.framework in Embed Frameworks */,
 				01C4D65B1D08EEE10079AD7D /* Alamofire.framework in Embed Frameworks */,
 				01C4D6661D08EEEC0079AD7D /* WebImage.framework in Embed Frameworks */,
-				01A8EB501D32747800EA697F /* GPUImage.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,7 +428,7 @@
 		01A8E7E61D321C5D00EA697F /* DALabeledCircularProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DALabeledCircularProgressView.h; sourceTree = "<group>"; };
 		01A8E7E71D321C5D00EA697F /* DALabeledCircularProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DALabeledCircularProgressView.m; sourceTree = "<group>"; };
 		01A8E7EA1D32275400EA697F /* SDWebImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDWebImage.xcodeproj; path = Carthage/Checkouts/SDWebImage/SDWebImage.xcodeproj; sourceTree = "<group>"; };
-		01A8EB4E1D32747800EA697F /* GPUImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GPUImage.framework; path = Carthage/Build/iOS/GPUImage.framework; sourceTree = "<group>"; };
+		01A8EB551D33E77100EA697F /* ImagePicker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImagePicker.framework; path = Carthage/Build/iOS/ImagePicker.framework; sourceTree = "<group>"; };
 		01C4D6131D08E88D0079AD7D /* NSFileManagerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSFileManagerExtensions.swift; sourceTree = "<group>"; };
 		01C4D6141D08E88D0079AD7D /* NSStringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSStringExtensions.swift; sourceTree = "<group>"; };
 		01C4D6151D08E88D0079AD7D /* NSURLExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSURLExtensions.swift; sourceTree = "<group>"; };
@@ -489,6 +483,7 @@
 			files = (
 				010F95C01D0ADF9F006F9266 /* libsqlite3.0.tbd in Frameworks */,
 				01C4D6671D08EEEC0079AD7D /* XCGLogger.framework in Frameworks */,
+				01A8EB561D33E77100EA697F /* ImagePicker.framework in Frameworks */,
 				01C4D6631D08EEEC0079AD7D /* SVProgressHUD.framework in Frameworks */,
 				01C4D65A1D08EEE10079AD7D /* Alamofire.framework in Frameworks */,
 				018A50331D13E34700365B1F /* FMDB.framework in Frameworks */,
@@ -920,7 +915,7 @@
 		01C4D6691D08EEFD0079AD7D /* ThirdFrameworks */ = {
 			isa = PBXGroup;
 			children = (
-				01A8EB4E1D32747800EA697F /* GPUImage.framework */,
+				01A8EB551D33E77100EA697F /* ImagePicker.framework */,
 				018A50321D13E34700365B1F /* FMDB.framework */,
 				01C4D65E1D08EEEC0079AD7D /* SVProgressHUD.framework */,
 				01C4D65F1D08EEEC0079AD7D /* WebImage.framework */,
@@ -1001,7 +996,6 @@
 			);
 			dependencies = (
 				01A8E7FE1D32276400EA697F /* PBXTargetDependency */,
-				018A50F41D1550F600365B1F /* PBXTargetDependency */,
 				018A50CE1D1418C800365B1F /* PBXTargetDependency */,
 			);
 			name = MemoryTool;
@@ -1389,11 +1383,6 @@
 			isa = PBXTargetDependency;
 			name = "SnapKit iOS";
 			targetProxy = 018A50CD1D1418C800365B1F /* PBXContainerItemProxy */;
-		};
-		018A50F41D1550F600365B1F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "XCGLogger (iOS)";
-			targetProxy = 018A50F31D1550F600365B1F /* PBXContainerItemProxy */;
 		};
 		0192040A1D086F16008F1F0C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

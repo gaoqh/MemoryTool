@@ -10,18 +10,22 @@ import UIKit
 import SnapKit
 import FMDB
 import Photos
+import ImagePicker
 
 let ADD_PLAN_CELL_ID = "add_plan_cell_id"
+/// 子控件的间距
+let CHILD_VIEW_MARGIN: CGFloat = 10
 
 class AddPlanViewController: UIViewController {
     
     //MARK: - UI控件
     private var mainScrollView: UIScrollView!
+    private var imagePickerVc: ImagePickerController!
     private var numberOfLines: Int = 1
     private let leftMargin: CGFloat = 15
     private let photoViewH: CGFloat = 120
     //MARK: - 属性
-    let addPhotoBtnW: CGFloat = 100
+    let addPhotoBtnW: CGFloat = (SCREENW - 10 * 4) / 4
     private var reviseTitle: String!
     private var reviseContents: [String]!
         private lazy var photoArray: [ZLPhotoPickerBrowserPhoto] = [ZLPhotoPickerBrowserPhoto]()
@@ -73,8 +77,8 @@ class AddPlanViewController: UIViewController {
         }
         photosView.snp_makeConstraints { (make) in
             make.top.equalTo(titleView.snp_bottom).offset(10)
-            make.left.equalTo(titleView.snp_left)
-            make.right.equalTo(titleView.snp_right)
+            make.left.equalTo(0)
+            make.width.equalTo(SCREENW)
             make.height.equalTo(photoViewH)
         }
         
@@ -85,6 +89,18 @@ class AddPlanViewController: UIViewController {
     
     func hideKeyboard() {
         
+    }
+    
+    func reloadPhotosView() {
+        let count = photoArray.count
+        let addPace = addPhotoBtnW + CHILD_VIEW_MARGIN
+
+        let newWidth = addPace * CGFloat(count + 1)
+        photosView.snp_updateConstraints { (make) in
+            make.width.equalTo(newWidth)
+        }
+        photosView.contentSize = CGSize(width: newWidth, height: photoViewH)
+        photosView.reloadData()
     }
     
     //MARK: - 懒加载子控件
@@ -102,39 +118,23 @@ class AddPlanViewController: UIViewController {
         let layout = UICollectionViewFlowLayout()
         let itemW = self.addPhotoBtnW
         layout.itemSize = CGSizeMake(itemW, itemW)
-        let margin: CGFloat = 10
         layout.minimumInteritemSpacing = 5
-        layout.sectionInset = UIEdgeInsets(top: 15, left: margin, bottom: 15, right: margin)
+        layout.sectionInset = UIEdgeInsets(top: 15, left: CHILD_VIEW_MARGIN, bottom: 15, right: CHILD_VIEW_MARGIN)
         
         let collView = UICollectionView(frame: CGRectZero, collectionViewLayout: layout)
         collView.backgroundColor = UIColor.whiteColor()
-        collView.bounces = false
-        collView.scrollEnabled = false
+        collView.bounces = true
+        collView.alwaysBounceHorizontal = true
+        collView.scrollEnabled = true
         collView.delegate = self
         collView.dataSource = self
         collView.registerNib(UINib(nibName: "PhotoViewCell", bundle: nil), forCellWithReuseIdentifier: ADD_PLAN_CELL_ID)
-        collView.showsHorizontalScrollIndicator = false
+        collView.showsHorizontalScrollIndicator = true
         collView.showsVerticalScrollIndicator = false
         
         return collView
     }()
     
-//    private lazy var tableView: UITableView = {
-//        let tableView = UITableView(frame: CGRectZero, style: .Plain)
-//        tableView.separatorStyle = .SingleLine
-//        tableView.rowHeight = 64
-//        tableView.registerClass(AddPlanCell.self, forCellReuseIdentifier: ADD_PLAN_CELL_ID)
-//        
-//        return tableView
-//    }()
-    
-//    private lazy var addBtn: UIButton = {
-//        let btn = UIButton(type: .Custom)
-//        btn.setTitle("新增", forState: .Normal)
-//        btn.setTitleColor(UIColor.blackColor(), forState: .Normal)
-//        btn.addTarget(self, action: #selector(AddPlanViewController.addBtnClick), forControlEvents: .TouchUpInside)
-//        return btn
-//    }()
     //MARK: - 启动数据库
     func openDataBase() {
         let documents = try! NSFileManager.defaultManager().URLForDirectory(.DocumentDirectory, inDomain: .UserDomainMask, appropriateForURL: nil, create: false)
@@ -174,7 +174,7 @@ class AddPlanViewController: UIViewController {
 
 extension AddPlanViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if photoArray.count == 9 {
+        if photoArray.count == 12 {
             return photoArray.count
         }else {
             return photoArray.count + 1
@@ -203,7 +203,12 @@ extension AddPlanViewController: UICollectionViewDelegate, UICollectionViewDataS
         hideKeyboard()
         
         if indexPath.row == photoArray.count {
-            //跳照相机
+            imagePickerVc = ImagePickerController()
+            imagePickerVc.delegate = self
+            imagePickerVc.imageLimit = 12
+            Configuration.doneButtonTitle = "完成"
+            
+            presentViewController(imagePickerVc, animated: true, completion: nil)
         }else {
             let brower = ZLPhotoPickerBrowserViewController()
             brower.editing = true
@@ -216,6 +221,25 @@ extension AddPlanViewController: UICollectionViewDelegate, UICollectionViewDataS
     }
 
     
+}
+
+extension AddPlanViewController: ImagePickerDelegate {
+    func wrapperDidPress(images: [UIImage]) {
+        
+    }
+    
+    func doneButtonDidPress(images: [UIImage]) {
+        photoArray = []
+        for image in images {
+            photoArray.append(ZLPhotoPickerBrowserPhoto(anyImageObjWith: image))
+        }
+        reloadPhotosView()
+        imagePickerVc.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func cancelButtonDidPress() {
+        
+    }
 }
 
 extension AddPlanViewController: ZLPhotoPickerBrowserViewControllerDelegate {
