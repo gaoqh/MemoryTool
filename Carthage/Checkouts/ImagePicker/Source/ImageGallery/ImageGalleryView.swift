@@ -24,7 +24,6 @@ public class ImageGalleryView: UIView {
     collectionView.backgroundColor = Configuration.mainColor
     collectionView.showsHorizontalScrollIndicator = false
     collectionView.dataSource = self
-    collectionView.delegate = self
 
     return collectionView
     }()
@@ -77,7 +76,7 @@ public class ImageGalleryView: UIView {
     }()
 
   public lazy var selectedStack = ImageStack()
-  lazy var assets = [PHAsset]()
+  public lazy var assets = [PHAsset]()
 
   weak var delegate: ImageGalleryPanGestureDelegate?
   var collectionSize: CGSize?
@@ -102,7 +101,7 @@ public class ImageGalleryView: UIView {
     topSeparator.addSubview(indicator)
 
     imagesBeforeLoading = 0
-    fetchPhotos()
+//    fetchPhotos()
   }
 
   required public init?(coder aDecoder: NSCoder) {

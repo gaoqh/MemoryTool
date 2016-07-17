@@ -28,3 +28,5 @@ public func APP_FONT(fontSize: CGFloat) -> UIFont{
     return UIFont.systemFontOfSize(fontSize)
 }
 
+let kImageCountLimit = 12
+

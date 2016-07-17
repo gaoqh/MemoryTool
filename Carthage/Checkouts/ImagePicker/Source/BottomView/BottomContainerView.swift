@@ -83,11 +83,8 @@ public class BottomContainerView: UIView {
   // MARK: - Action methods
 
   func doneButtonDidPress(button: UIButton) {
-    if button.currentTitle == Configuration.cancelButtonTitle {
-      delegate?.cancelButtonDidPress()
-    } else {
-      delegate?.doneButtonDidPress()
-    }
+    delegate?.cancelButtonDidPress()
+
   }
 
   func handleTapGestureRecognizer(recognizer: UITapGestureRecognizer) {

@@ -12,18 +12,20 @@ import FMDB
 import Photos
 import ImagePicker
 
+
 let ADD_PLAN_CELL_ID = "add_plan_cell_id"
 /// 子控件的间距
 let CHILD_VIEW_MARGIN: CGFloat = 10
 
 class AddPlanViewController: UIViewController {
     
+    let local: UILocalNotification? = nil
     //MARK: - UI控件
     private var mainScrollView: UIScrollView!
     private var imagePickerVc: ImagePickerController!
     private var numberOfLines: Int = 1
     private let leftMargin: CGFloat = 15
-    private let photoViewH: CGFloat = 120
+    private var photosLayout: UICollectionViewFlowLayout!
     //MARK: - 属性
     let addPhotoBtnW: CGFloat = (SCREENW - 10 * 4) / 4
     private var reviseTitle: String!
@@ -79,7 +81,7 @@ class AddPlanViewController: UIViewController {
             make.top.equalTo(titleView.snp_bottom).offset(10)
             make.left.equalTo(0)
             make.width.equalTo(SCREENW)
-            make.height.equalTo(photoViewH)
+            make.height.equalTo(addPhotoBtnW)
         }
         
         mainScrollView.snp_makeConstraints { (make) in
@@ -88,19 +90,7 @@ class AddPlanViewController: UIViewController {
     }
     
     func hideKeyboard() {
-        
-    }
-    
-    func reloadPhotosView() {
-        let count = photoArray.count
-        let addPace = addPhotoBtnW + CHILD_VIEW_MARGIN
-
-        let newWidth = addPace * CGFloat(count + 1)
-        photosView.snp_updateConstraints { (make) in
-            make.width.equalTo(newWidth)
-        }
-        photosView.contentSize = CGSize(width: newWidth, height: photoViewH)
-        photosView.reloadData()
+        titleView.resignFirstResponder()
     }
     
     //MARK: - 懒加载子控件
@@ -118,14 +108,13 @@ class AddPlanViewController: UIViewController {
         let layout = UICollectionViewFlowLayout()
         let itemW = self.addPhotoBtnW
         layout.itemSize = CGSizeMake(itemW, itemW)
+        layout.scrollDirection = UICollectionViewScrollDirection.Horizontal
         layout.minimumInteritemSpacing = 5
         layout.sectionInset = UIEdgeInsets(top: 15, left: CHILD_VIEW_MARGIN, bottom: 15, right: CHILD_VIEW_MARGIN)
         
         let collView = UICollectionView(frame: CGRectZero, collectionViewLayout: layout)
         collView.backgroundColor = UIColor.whiteColor()
-        collView.bounces = true
         collView.alwaysBounceHorizontal = true
-        collView.scrollEnabled = true
         collView.delegate = self
         collView.dataSource = self
         collView.registerNib(UINib(nibName: "PhotoViewCell", bundle: nil), forCellWithReuseIdentifier: ADD_PLAN_CELL_ID)
@@ -181,6 +170,7 @@ extension AddPlanViewController: UICollectionViewDelegate, UICollectionViewDataS
         }
     }
     
+    
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(ADD_PLAN_CELL_ID, forIndexPath: indexPath) as! PhotoViewCell
         //如果是最后一张图片，就是添加按钮
@@ -205,9 +195,10 @@ extension AddPlanViewController: UICollectionViewDelegate, UICollectionViewDataS
         if indexPath.row == photoArray.count {
             imagePickerVc = ImagePickerController()
             imagePickerVc.delegate = self
-            imagePickerVc.imageLimit = 12
-            Configuration.doneButtonTitle = "完成"
+            imagePickerVc.imageLimit = kImageCountLimit - photoArray.count
             
+            Configuration.doneButtonTitle = "取消"
+            Configuration.cancelButtonTitle = "取消"
             presentViewController(imagePickerVc, animated: true, completion: nil)
         }else {
             let brower = ZLPhotoPickerBrowserViewController()
@@ -224,16 +215,28 @@ extension AddPlanViewController: UICollectionViewDelegate, UICollectionViewDataS
 }
 
 extension AddPlanViewController: ImagePickerDelegate {
+    
     func wrapperDidPress(images: [UIImage]) {
-        
+        let vc = ZLPhotoPickerViewController()
+        vc.maxCount = kImageCountLimit - photoArray.count
+        vc.status = .CameraRoll
+        vc.photoStatus = .Photos
+        vc.selectPickers = photoArray
+        vc.topShowPhotoPicker = true
+        vc.callBack = { [weak self] (status) -> Void in
+            for asset in status as [ZLPhotoAssets]{
+//               let photoAsset =
+            }
+
+        }
+        vc.showPickerVc(imagePickerVc)
     }
     
     func doneButtonDidPress(images: [UIImage]) {
-        photoArray = []
         for image in images {
             photoArray.append(ZLPhotoPickerBrowserPhoto(anyImageObjWith: image))
         }
-        reloadPhotosView()
+        photosView.reloadData()
         imagePickerVc.dismissViewControllerAnimated(true, completion: nil)
     }
     

@@ -33,9 +33,8 @@ class TopView: UIView {
 
   lazy var rotateCamera: UIButton = { [unowned self] in
     let button = UIButton()
-    button.setImage(AssetManager.getImage("cameraIcon"), forState: .Normal)
+    button.setTitle("保存", forState: UIControlState.Normal)
     button.addTarget(self, action: #selector(rotateCameraButtonDidPress(_:)), forControlEvents: .TouchUpInside)
-    button.imageView?.contentMode = .Center
 
     return button
     }()
@@ -49,9 +48,7 @@ class TopView: UIView {
     
     var buttons: [UIButton] = [flashButton]
 
-    if (Configuration.canRotateCamera) {
-        buttons.append(rotateCamera)
-    }
+    buttons.append(rotateCamera)
     
     for button in buttons {
       button.layer.shadowColor = UIColor.blackColor().CGColor

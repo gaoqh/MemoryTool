@@ -11,7 +11,7 @@ public protocol ImagePickerDelegate: class {
 
 public class ImagePickerController: UIViewController {
 
-  struct GestureConstants {
+    struct GestureConstants {
     static let maximumHeight: CGFloat = 200
     static let minimumHeight: CGFloat = 125
     static let velocity: CGFloat = 100
@@ -374,7 +374,8 @@ extension ImagePickerController: TopViewDelegate {
   }
 
   func rotateDeviceDidPress() {
-    cameraController.rotateCamera()
+    let images = ImagePicker.resolveAssets(stack.assets)
+    delegate?.doneButtonDidPress(images)
   }
 }
 
