@@ -8,6 +8,7 @@
 
 import UIKit
 import XCGLogger
+import SVProgressHUD
 
 let log: XCGLogger = {
     let log = XCGLogger.defaultInstance()
@@ -31,9 +32,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //配置全局log
         configLog()
-
-        
-    
+        //配置全局导航栏和状态栏
+        configNavigationBar()
+        //配置全局SVProgressHUD
+        configSVProgressHUD()
         
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         let nav = MainNavigationController(rootViewController: HomeViewController())
@@ -55,6 +57,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             .Error: XCGLogger.XcodeColor(fg: UIColor.redColor(), bg: UIColor.whiteColor()), // Optionally use a UIColor
             .Severe: XCGLogger.XcodeColor(fg: (255, 255, 255), bg: (255, 0, 0)) // Optionally use RGB values directly
         ]
+    }
+    func configNavigationBar() {
+        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
+    }
+    func configSVProgressHUD() {
+        SVProgressHUD.setMinimumDismissTimeInterval(1)
     }
 
     func applicationWillResignActive(application: UIApplication) {

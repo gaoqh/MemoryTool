@@ -53,8 +53,6 @@ class HomeViewController: UIViewController, UINavigationControllerDelegate {
     //MARK: - 设置UI
     func setNav() {
         navigationController?.delegate = self
-        navigationController?.navigationBar.tintColor = homeColor
-        navigationController?.navigationBar.barStyle = UIBarStyle.BlackTranslucent
         navigationItem.leftBarButtonItem = UIBarButtonItem.item("", title: "今日", target: self, action: #selector(HomeViewController.leftItemClick))
         navigationItem.rightBarButtonItem = UIBarButtonItem.item("naviItemRight", title: "", target: self, action: #selector(HomeViewController.rightItemClick))
         monthLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 150, height: 30))
@@ -108,11 +106,13 @@ class HomeViewController: UIViewController, UINavigationControllerDelegate {
     }
     
     func rightItemClick() {
-        navigationController?.pushViewController(ReviseViewController(), animated: true)
+        presentViewController(MainNavigationController(rootViewController: LoginViewController(loginHandler: { [weak self] in
+            self!.navigationController?.pushViewController(ReviseViewController(), animated: true)
+        })), animated: true, completion: nil)
     }
     
     func addPlanBtnClick() {
-        let nav = UINavigationController(rootViewController: AddPlanViewController())
+        let nav = MainNavigationController(rootViewController: AddPlanViewController())
         presentViewController(nav, animated: true, completion: nil)
         
     }

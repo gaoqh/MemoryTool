@@ -27,6 +27,17 @@
 		0133E4261D31EAD300F1E290 /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0133E4191D31EAD300F1E290 /* NSObject+MJKeyValue.m */; };
 		0133E4271D31EAD300F1E290 /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 0133E41B1D31EAD300F1E290 /* NSObject+MJProperty.m */; };
 		0133E4281D31EAD300F1E290 /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0133E41D1D31EAD300F1E290 /* NSString+MJExtension.m */; };
+		0146CB151D3E6DA3009DC509 /* NotebookListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0146CB141D3E6DA3009DC509 /* NotebookListController.swift */; };
+		0146CB171D3E6E24009DC509 /* MemoryCurveListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0146CB161D3E6E24009DC509 /* MemoryCurveListController.swift */; };
+		0146CB281D43BBB8009DC509 /* Notebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0146CB271D43BBB8009DC509 /* Notebook.swift */; };
+		0146CB2C1D43CE40009DC509 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0146CB2B1D43CE40009DC509 /* LoginViewController.swift */; };
+		0146CB371D445CE5009DC509 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0146CB361D445CE5009DC509 /* RegisterViewController.swift */; };
+		0146CB3E1D445CFB009DC509 /* FindPwdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0146CB3D1D445CFB009DC509 /* FindPwdViewController.swift */; };
+		0146CB461D44ADA8009DC509 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0146CB451D44ADA8009DC509 /* BaseViewController.swift */; };
+		0146CB481D44D74E009DC509 /* FindPwdViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0146CB471D44D74E009DC509 /* FindPwdViewController2.swift */; };
+		0146CB4A1D44DD49009DC509 /* FindPwdViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0146CB491D44DD49009DC509 /* FindPwdViewController3.swift */; };
+		0146CB4C1D44F231009DC509 /* UIImageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0146CB4B1D44F231009DC509 /* UIImageConstants.swift */; };
+		0146CB5D1D479E40009DC509 /* NetWorkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0146CB5C1D479E40009DC509 /* NetWorkTool.swift */; };
 		014D44731D0979CD00561B78 /* ReviseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014D44721D0979CD00561B78 /* ReviseViewController.swift */; };
 		018A50331D13E34700365B1F /* FMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018A50321D13E34700365B1F /* FMDB.framework */; };
 		018A50341D13E34700365B1F /* FMDB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 018A50321D13E34700365B1F /* FMDB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -345,6 +356,17 @@
 		0133E41B1D31EAD300F1E290 /* NSObject+MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJProperty.m"; sourceTree = "<group>"; };
 		0133E41C1D31EAD300F1E290 /* NSString+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MJExtension.h"; sourceTree = "<group>"; };
 		0133E41D1D31EAD300F1E290 /* NSString+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MJExtension.m"; sourceTree = "<group>"; };
+		0146CB141D3E6DA3009DC509 /* NotebookListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotebookListController.swift; sourceTree = "<group>"; };
+		0146CB161D3E6E24009DC509 /* MemoryCurveListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryCurveListController.swift; sourceTree = "<group>"; };
+		0146CB271D43BBB8009DC509 /* Notebook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notebook.swift; sourceTree = "<group>"; };
+		0146CB2B1D43CE40009DC509 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0146CB361D445CE5009DC509 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		0146CB3D1D445CFB009DC509 /* FindPwdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindPwdViewController.swift; sourceTree = "<group>"; };
+		0146CB451D44ADA8009DC509 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		0146CB471D44D74E009DC509 /* FindPwdViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindPwdViewController2.swift; sourceTree = "<group>"; };
+		0146CB491D44DD49009DC509 /* FindPwdViewController3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindPwdViewController3.swift; sourceTree = "<group>"; };
+		0146CB4B1D44F231009DC509 /* UIImageConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageConstants.swift; sourceTree = "<group>"; };
+		0146CB5C1D479E40009DC509 /* NetWorkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorkTool.swift; sourceTree = "<group>"; };
 		014D44721D0979CD00561B78 /* ReviseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviseViewController.swift; sourceTree = "<group>"; };
 		018A50321D13E34700365B1F /* FMDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FMDB.framework; path = Carthage/Build/iOS/FMDB.framework; sourceTree = "<group>"; };
 		018A503B1D13FF8900365B1F /* UITextFieldExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldExtensions.swift; sourceTree = "<group>"; };
@@ -519,6 +541,7 @@
 			isa = PBXGroup;
 			children = (
 				010F95C21D104136006F9266 /* MainNavigationController.swift */,
+				0146CB451D44ADA8009DC509 /* BaseViewController.swift */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -551,6 +574,34 @@
 			name = MJExtension;
 			path = Carthage/Checkouts/MJExtension/MJExtension;
 			sourceTree = SOURCE_ROOT;
+		};
+		0146CB211D43BB52009DC509 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				0146CB271D43BBB8009DC509 /* Notebook.swift */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		0146CB2A1D43CE25009DC509 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				0146CB2B1D43CE40009DC509 /* LoginViewController.swift */,
+				0146CB361D445CE5009DC509 /* RegisterViewController.swift */,
+				0146CB3D1D445CFB009DC509 /* FindPwdViewController.swift */,
+				0146CB471D44D74E009DC509 /* FindPwdViewController2.swift */,
+				0146CB491D44DD49009DC509 /* FindPwdViewController3.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		0146CB561D479BBF009DC509 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				0146CB5C1D479E40009DC509 /* NetWorkTool.swift */,
+			);
+			name = NetWork;
+			sourceTree = "<group>";
 		};
 		014D44751D0A517A00561B78 /* Revise */ = {
 			isa = PBXGroup;
@@ -609,8 +660,9 @@
 				018A50D71D14195100365B1F /* AThirdProjects */,
 				01D6FB5F1D091BBF0086A940 /* Dependencies */,
 				01C4D6691D08EEFD0079AD7D /* ThirdFrameworks */,
-				01C4D6241D08E8970079AD7D /* Utils */,
 				01C4D6111D08E88D0079AD7D /* Extensions */,
+				01C4D6241D08E8970079AD7D /* Utils */,
+				0146CB561D479BBF009DC509 /* NetWork */,
 				019203F61D086F16008F1F0C /* MemoryTool */,
 				0192040B1D086F16008F1F0C /* MemoryToolTests */,
 				019204161D086F16008F1F0C /* MemoryToolUITests */,
@@ -631,6 +683,7 @@
 		019203F61D086F16008F1F0C /* MemoryTool */ = {
 			isa = PBXGroup;
 			children = (
+				0146CB2A1D43CE25009DC509 /* Login */,
 				010F95C11D10410B006F9266 /* Main */,
 				010F95BC1D0AC0B7006F9266 /* SQLite */,
 				014D44751D0A517A00561B78 /* Revise */,
@@ -847,6 +900,8 @@
 			children = (
 				01C4D6301D08E9910079AD7D /* HomeViewController.swift */,
 				010F95641D0A73C6006F9266 /* AddPlanViewController.swift */,
+				0146CB141D3E6DA3009DC509 /* NotebookListController.swift */,
+				0146CB161D3E6E24009DC509 /* MemoryCurveListController.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -906,6 +961,7 @@
 		01C4D62F1D08E9790079AD7D /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				0146CB211D43BB52009DC509 /* model */,
 				01A8E8711D3247CA00EA697F /* view */,
 				01A8E8701D3247B400EA697F /* controllers */,
 			);
@@ -975,6 +1031,7 @@
 			isa = PBXGroup;
 			children = (
 				01D6FB991D091D4D0086A940 /* GlobalConfig.swift */,
+				0146CB4B1D44F231009DC509 /* UIImageConstants.swift */,
 			);
 			name = Config;
 			sourceTree = "<group>";
@@ -1267,6 +1324,7 @@
 			files = (
 				01A8E7CC1D31F4BF00EA697F /* ZLPhotoPickerBrowserViewController.m in Sources */,
 				01D6FB881D091BC00086A940 /* CVCalendarViewAnimatorDelegate.swift in Sources */,
+				0146CB5D1D479E40009DC509 /* NetWorkTool.swift in Sources */,
 				0133E4241D31EAD300F1E290 /* NSObject+MJClass.m in Sources */,
 				01A8E7D41D31F4BF00EA697F /* UIViewController+Alert.m in Sources */,
 				01C4D6231D08E88D0079AD7D /* UIViewExtensions.swift in Sources */,
@@ -1277,8 +1335,10 @@
 				01A8E7DA1D31F4BF00EA697F /* ZLPhotoPickerCollectionViewCell.m in Sources */,
 				01D6FB931D091BC00086A940 /* CVSelectionType.swift in Sources */,
 				01D6FB8A1D091BC00086A940 /* CVCalendarViewAppearanceDelegate.swift in Sources */,
+				0146CB2C1D43CE40009DC509 /* LoginViewController.swift in Sources */,
 				01A8E7E81D321C5D00EA697F /* DACircularProgressView.m in Sources */,
 				0133E4271D31EAD300F1E290 /* NSObject+MJProperty.m in Sources */,
+				0146CB371D445CE5009DC509 /* RegisterViewController.swift in Sources */,
 				01D6FB911D091BC00086A940 /* CVRange.swift in Sources */,
 				01A8E7D31D31F4BF00EA697F /* ZLPhotoPickerGroup.m in Sources */,
 				01D6FB961D091BC00086A940 /* CVWeekdaySymbolType.swift in Sources */,
@@ -1299,8 +1359,10 @@
 				018A503C1D13FF8900365B1F /* UITextFieldExtensions.swift in Sources */,
 				01A8E7CA1D31F4BF00EA697F /* ZLPhotoRect.m in Sources */,
 				014D44731D0979CD00561B78 /* ReviseViewController.swift in Sources */,
+				0146CB281D43BBB8009DC509 /* Notebook.swift in Sources */,
 				010F95C31D104136006F9266 /* MainNavigationController.swift in Sources */,
 				010F95D01D104E18006F9266 /* FeedbackViewController.swift in Sources */,
+				0146CB4C1D44F231009DC509 /* UIImageConstants.swift in Sources */,
 				01C4D61E1D08E88D0079AD7D /* NSURLExtensions.swift in Sources */,
 				010F95CD1D104D6C006F9266 /* CurveSettingController.swift in Sources */,
 				01C4D6221D08E88D0079AD7D /* UIImageExtension.swift in Sources */,
@@ -1315,7 +1377,9 @@
 				01A8E7C91D31F4BF00EA697F /* ZLPhotoPickerBrowserPhoto.m in Sources */,
 				01D6FB941D091BC00086A940 /* CVSet.swift in Sources */,
 				01A8E7D81D31F4BF00EA697F /* ZLPhotoPickerViewController.m in Sources */,
+				0146CB171D3E6E24009DC509 /* MemoryCurveListController.swift in Sources */,
 				01A8E7D11D31F4BF00EA697F /* ZLPhotoAssets.m in Sources */,
+				0146CB3E1D445CFB009DC509 /* FindPwdViewController.swift in Sources */,
 				018A51041D1555EA00365B1F /* AddPlanCell.swift in Sources */,
 				01A8E7D71D31F4BF00EA697F /* ZLPhotoPickerGroupViewController.m in Sources */,
 				01C4D62A1D08E8970079AD7D /* AppInfo.swift in Sources */,
@@ -1328,6 +1392,7 @@
 				01C4D61C1D08E88D0079AD7D /* NSFileManagerExtensions.swift in Sources */,
 				01C4D62D1D08E8970079AD7D /* RollingFileLogger.swift in Sources */,
 				01A8E7CD1D31F4BF00EA697F /* ZLPhotoPickerBrowserPhotoImageView.m in Sources */,
+				0146CB461D44ADA8009DC509 /* BaseViewController.swift in Sources */,
 				01C4D62E1D08E8970079AD7D /* TimeConstants.swift in Sources */,
 				0114F6721D129A490074E3C7 /* ReviseContentCell.swift in Sources */,
 				01A8E7C81D31F4BF00EA697F /* ZLCameraViewController.m in Sources */,
@@ -1338,6 +1403,7 @@
 				01D6FB7D1D091BC00086A940 /* CVCalendarContentViewController.swift in Sources */,
 				0133E4211D31EAD300F1E290 /* MJProperty.m in Sources */,
 				01D6FB811D091BC00086A940 /* CVCalendarMenuView.swift in Sources */,
+				0146CB151D3E6DA3009DC509 /* NotebookListController.swift in Sources */,
 				01A8E7D91D31F4BF00EA697F /* ZLPhotoPickerCollectionView.m in Sources */,
 				01D6FB7E1D091BC00086A940 /* CVCalendarDayView.swift in Sources */,
 				01A8E7D01D31F4BF00EA697F /* ZLPhotoPickerCustomToolBarView.m in Sources */,
@@ -1346,8 +1412,10 @@
 				01A8E7C41D31F4BF00EA697F /* UIView+ZLExtension.m in Sources */,
 				01D6FB801D091BC00086A940 /* CVCalendarManager.swift in Sources */,
 				01D6FB8E1D091BC00086A940 /* CVCalendarWeekday.swift in Sources */,
+				0146CB481D44D74E009DC509 /* FindPwdViewController2.swift in Sources */,
 				01A8E7C51D31F4BF00EA697F /* ZLCamera.m in Sources */,
 				01C4D62C1D08E8970079AD7D /* Logger.swift in Sources */,
+				0146CB4A1D44DD49009DC509 /* FindPwdViewController3.swift in Sources */,
 				01A8E7DB1D31F4BF00EA697F /* ZLPhotoPickerFooterCollectionReusableView.m in Sources */,
 				0114F66F1D1292790074E3C7 /* NoHighlightButton.swift in Sources */,
 				01D6FB8D1D091BC00086A940 /* CVCalendarWeekContentViewController.swift in Sources */,

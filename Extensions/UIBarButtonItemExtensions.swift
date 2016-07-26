@@ -19,8 +19,8 @@ extension UIBarButtonItem {
         if title.characters.count>0 {
             //设置文字以及字体颜色,以及字体大小
             button.setTitle(title, forState: UIControlState.Normal)
-            button.titleLabel?.font = UIFont.systemFontOfSize(16)
-            button.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
+            button.titleLabel?.font = APP_FONT(14)
+            button.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
             //高亮的颜色
             button.setTitleColor(UIColor.orangeColor(), forState: UIControlState.Highlighted)
         }

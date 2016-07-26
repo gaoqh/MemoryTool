@@ -19,13 +19,14 @@ let CHILD_VIEW_MARGIN: CGFloat = 10
 
 class AddPlanViewController: UIViewController {
     
-    let local: UILocalNotification? = nil
+    let local: UILocalNotification?=nil
     //MARK: - UI控件
     private var mainScrollView: UIScrollView!
     private var imagePickerVc: ImagePickerController!
     private var numberOfLines: Int = 1
     private let leftMargin: CGFloat = 15
     private var photosLayout: UICollectionViewFlowLayout!
+    private var detailLabel: UILabel!
     //MARK: - 属性
     let addPhotoBtnW: CGFloat = (SCREENW - 10 * 4) / 4
     private var reviseTitle: String!
@@ -42,7 +43,6 @@ class AddPlanViewController: UIViewController {
         
         setNav()
         configUI()
-        openDataBase()
         
     }
     //MARK: - 构造（析构）方法
@@ -62,10 +62,12 @@ class AddPlanViewController: UIViewController {
 
         view.addSubview(mainScrollView)
         mainScrollView.alwaysBounceVertical = true
-        mainScrollView.backgroundColor = UIColor.whiteColor()
+        mainScrollView.backgroundColor = UIColor.grayColor()
         
         mainScrollView.addSubview(titleView)
         mainScrollView.addSubview(photosView)
+        mainScrollView.addSubview(notebookCell)
+        mainScrollView.addSubview(memoryCurveCell)
         
         setConstraints()
     }
@@ -83,7 +85,18 @@ class AddPlanViewController: UIViewController {
             make.width.equalTo(SCREENW)
             make.height.equalTo(addPhotoBtnW)
         }
-        
+        notebookCell.snp_makeConstraints { (make) in
+            make.left.equalTo(0)
+            make.width.equalTo(SCREENW)
+            make.top.equalTo(photosView.snp_bottom).offset(20)
+            make.height.equalTo(47)
+        }
+        memoryCurveCell.snp_makeConstraints { (make) in
+            make.left.equalTo(0)
+            make.width.equalTo(SCREENW)
+            make.top.equalTo(notebookCell.snp_bottom).offset(20)
+            make.height.equalTo(47)
+        }
         mainScrollView.snp_makeConstraints { (make) in
             make.edges.equalTo(view)
         }
@@ -98,7 +111,7 @@ class AddPlanViewController: UIViewController {
         let field = UITextView()
         field.backgroundColor = UIColor.redColor()
         field.textColor = UIColor.lightGrayColor()
-        field.font = UIFont.systemFontOfSize(14)
+        field.font = APP_FONT(14)
         field.text = "想要记录的..."
         return field
     }()
@@ -122,6 +135,40 @@ class AddPlanViewController: UIViewController {
         collView.showsVerticalScrollIndicator = false
         
         return collView
+    }()
+    private lazy var notebookCell: UITableViewCell = {
+        let cell = UITableViewCell()
+        cell.accessoryType = .DisclosureIndicator
+        cell.textLabel?.text = "笔记本"
+        cell.backgroundColor = UIColor.darkGrayColor()
+        cell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(AddPlanViewController.notebookCellClick)))
+        
+        
+        self.detailLabel = UILabel()
+        self.detailLabel.textAlignment = .Right
+        cell.addSubview(self.detailLabel)
+        self.detailLabel.snp_makeConstraints { (make) in
+            make.right.equalTo(-100)
+            make.centerY.equalTo(0)
+        }
+        self.detailLabel.text = "经济学"
+        return cell
+    }()
+    private lazy var memoryCurveCell: UITableViewCell = {
+        let cell = UITableViewCell()
+        cell.accessoryType = .DisclosureIndicator
+        cell.textLabel?.text = "记忆曲线"
+        cell.backgroundColor = UIColor.darkGrayColor()
+        cell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(AddPlanViewController.memoryCurveCellClick)))
+        self.detailLabel = UILabel()
+        self.detailLabel.textAlignment = .Right
+        cell.addSubview(self.detailLabel)
+        self.detailLabel.snp_makeConstraints { (make) in
+            make.right.equalTo(-100)
+            make.centerY.equalTo(0)
+        }
+        self.detailLabel.text = "低频"
+        return cell
     }()
     
     //MARK: - 启动数据库
@@ -154,10 +201,12 @@ class AddPlanViewController: UIViewController {
         navigationController?.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    func addBtnClick() {
-        
+    func notebookCellClick() {
+        navigationController?.pushViewController(NotebookListController(), animated: true)
     }
-
+    func memoryCurveCellClick() {
+        navigationController?.pushViewController(MemoryCurveListController(), animated: true)
+    }
 
 }
 
@@ -234,7 +283,9 @@ extension AddPlanViewController: ImagePickerDelegate {
     
     func doneButtonDidPress(images: [UIImage]) {
         for image in images {
-            photoArray.append(ZLPhotoPickerBrowserPhoto(anyImageObjWith: image))
+//            photoArray.append(ZLPhotoPickerBrowserPhoto(anyImageObjWith: image))
+            let data: NSData = UIImageJPEGRepresentation(image, 0.1)!
+            photoArray.append(ZLPhotoPickerBrowserPhoto(anyImageObjWith: UIImage(data: data)))
         }
         photosView.reloadData()
         imagePickerVc.dismissViewControllerAnimated(true, completion: nil)

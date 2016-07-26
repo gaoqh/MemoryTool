@@ -7,13 +7,18 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class MainNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        navigationBar.barTintColor = Theme.ColorNavi
+        navigationBar.titleTextAttributes = [
+            NSFontAttributeName: APP_FONT(15),
+            NSForegroundColorAttributeName: UIColor.whiteColor()
+        ]
     }
     
     override func pushViewController(viewController: UIViewController, animated: Bool) {
@@ -21,11 +26,11 @@ class MainNavigationController: UINavigationController {
         if childViewControllers.count>0 {
             
             //设置导航栏和tabBar栏的背景颜色
-            viewController.navigationController?.navigationBar.backgroundColor = APP_COLOR_STATUSBAR
-            viewController.tabBarController?.tabBar.backgroundColor = APP_COLOR_STATUSBAR
+            viewController.navigationController?.navigationBar.backgroundColor = Theme.ColorNavi
+            viewController.tabBarController?.tabBar.backgroundColor = Theme.ColorNavi
 
             //设置返回键盘
-            viewController.navigationItem.leftBarButtonItem = UIBarButtonItem.item("navigationbar_back_withtext", title: "", target: self, action: #selector(MainNavigationController.back))
+            viewController.navigationItem.leftBarButtonItem = UIBarButtonItem.item("navigationbar_back_withtext", title: "返回", target: self, action: #selector(MainNavigationController.back))
             
         }
         super.pushViewController(viewController, animated: animated)
@@ -33,7 +38,7 @@ class MainNavigationController: UINavigationController {
 
     
     func back(){
-        
+        SVProgressHUD.dismiss()
         popViewControllerAnimated(true)
         
     }
