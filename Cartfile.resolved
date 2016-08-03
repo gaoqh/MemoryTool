@@ -1,5 +1,6 @@
 github "Alamofire/Alamofire" "3.4.1"
-github "hyperoslo/ImagePicker" "1.3.0"
+github "hyperoslo/ImagePicker" "1.4.0"
+github "CoderMJLee/MJExtension" "3.0.13"
 github "rs/SDWebImage" "3.8.1"
 github "SVProgressHUD/SVProgressHUD" "2.0.3"
 github "SnapKit/SnapKit" "0.21.1"

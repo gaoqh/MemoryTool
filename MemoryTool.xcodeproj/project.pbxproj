@@ -42,7 +42,6 @@
 		018A50331D13E34700365B1F /* FMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018A50321D13E34700365B1F /* FMDB.framework */; };
 		018A50341D13E34700365B1F /* FMDB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 018A50321D13E34700365B1F /* FMDB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		018A503C1D13FF8900365B1F /* UITextFieldExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018A503B1D13FF8900365B1F /* UITextFieldExtensions.swift */; };
-		018A50CF1D1418D600365B1F /* SnapKit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 018A50C01D1418A700365B1F /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		018A51041D1555EA00365B1F /* AddPlanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018A51021D1555EA00365B1F /* AddPlanCell.swift */; };
 		018A51051D1555EA00365B1F /* AddPlanCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 018A51031D1555EA00365B1F /* AddPlanCell.xib */; };
 		019203F81D086F16008F1F0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019203F71D086F16008F1F0C /* AppDelegate.swift */; };
@@ -134,6 +133,9 @@
 		01D6FB951D091BC00086A940 /* CVShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D6FB7A1D091BC00086A940 /* CVShape.swift */; };
 		01D6FB961D091BC00086A940 /* CVWeekdaySymbolType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D6FB7B1D091BC00086A940 /* CVWeekdaySymbolType.swift */; };
 		01D6FB9A1D091D4D0086A940 /* GlobalConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D6FB991D091D4D0086A940 /* GlobalConfig.swift */; };
+		01F9DC551D52431300DAA7A7 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F9DC541D52431300DAA7A7 /* LoginModel.swift */; };
+		01F9DC841D52546A00DAA7A7 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F9DC831D52546A00DAA7A7 /* SnapKit.framework */; };
+		01F9DC851D52547300DAA7A7 /* SnapKit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 01F9DC831D52546A00DAA7A7 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -300,7 +302,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				018A50CF1D1418D600365B1F /* SnapKit.framework in Copy Frameworks */,
+				01F9DC851D52547300DAA7A7 /* SnapKit.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -496,6 +498,8 @@
 		01D6FB7A1D091BC00086A940 /* CVShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVShape.swift; sourceTree = "<group>"; };
 		01D6FB7B1D091BC00086A940 /* CVWeekdaySymbolType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVWeekdaySymbolType.swift; sourceTree = "<group>"; };
 		01D6FB991D091D4D0086A940 /* GlobalConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalConfig.swift; sourceTree = "<group>"; };
+		01F9DC541D52431300DAA7A7 /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		01F9DC831D52546A00DAA7A7 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -510,6 +514,7 @@
 				01C4D65A1D08EEE10079AD7D /* Alamofire.framework in Frameworks */,
 				018A50331D13E34700365B1F /* FMDB.framework in Frameworks */,
 				01C4D6651D08EEEC0079AD7D /* WebImage.framework in Frameworks */,
+				01F9DC841D52546A00DAA7A7 /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -586,6 +591,7 @@
 		0146CB2A1D43CE25009DC509 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				01F9DC541D52431300DAA7A7 /* LoginModel.swift */,
 				0146CB2B1D43CE40009DC509 /* LoginViewController.swift */,
 				0146CB361D445CE5009DC509 /* RegisterViewController.swift */,
 				0146CB3D1D445CFB009DC509 /* FindPwdViewController.swift */,
@@ -971,6 +977,7 @@
 		01C4D6691D08EEFD0079AD7D /* ThirdFrameworks */ = {
 			isa = PBXGroup;
 			children = (
+				01F9DC831D52546A00DAA7A7 /* SnapKit.framework */,
 				01A8EB551D33E77100EA697F /* ImagePicker.framework */,
 				018A50321D13E34700365B1F /* FMDB.framework */,
 				01C4D65E1D08EEEC0079AD7D /* SVProgressHUD.framework */,
@@ -1343,6 +1350,7 @@
 				01A8E7D31D31F4BF00EA697F /* ZLPhotoPickerGroup.m in Sources */,
 				01D6FB961D091BC00086A940 /* CVWeekdaySymbolType.swift in Sources */,
 				01A8E7D51D31F4BF00EA697F /* ZLNavigationController.m in Sources */,
+				01F9DC551D52431300DAA7A7 /* LoginModel.swift in Sources */,
 				0133E4281D31EAD300F1E290 /* NSString+MJExtension.m in Sources */,
 				01C4D6211D08E88D0079AD7D /* UIColorExtensions.swift in Sources */,
 				01C4D6201D08E88D0079AD7D /* UIBarButtonItemExtensions.swift in Sources */,

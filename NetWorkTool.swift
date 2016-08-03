@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import SVProgressHUD
 
 enum NetWorkToolRequestType: String {
     case GET = "GET"
@@ -16,13 +17,17 @@ enum NetWorkToolRequestType: String {
 
 struct NetWorkToolConstant {
     /// 测试
-    static var REQUEST_URL: String = "http://182.92.97.47:8080/mr/user/login.shtml"
+    static var REQUEST_URL: String = "http://182.92.97.47:8080/mr"
+    
+    static let login: String = "/user/login.shtml"
 }
+
+
 
 class NetWorkTool: NSObject {
     //如果想让controller直接通过我这个类去请求网络数据的
     //当前请求成功的闭包类型:  (result: [String: AnyObject])->()
-    class func request(type: NetWorkToolRequestType,url: String=NetWorkToolConstant.REQUEST_URL, params: [String: AnyObject]?,accessToken: Bool = true , success:((result: [String: AnyObject])->()), failure:(error: NSError)->()) {
+    class func request(type: NetWorkToolRequestType,url: String=NetWorkToolConstant.REQUEST_URL, transactionType: String, params: [String: AnyObject]?,accessToken: Bool = true , success:((result: String) -> Void), failure:(error: NSError)->Void) {
         
         //定义一个请求成功之后的闭包
         
@@ -31,7 +36,7 @@ class NetWorkTool: NSObject {
             /// 如果是字典
             if let res = (result as? [String: AnyObject]) {
                 //把数据回调回去
-                success(result: res)
+               
             }else{
                 //如果数据类型不对,回调错误信息->自定义的信息
         
@@ -50,13 +55,15 @@ class NetWorkTool: NSObject {
         
         if type == .GET {
             //发送get请求
-            Alamofire.request(.GET, url, parameters: params)
+            Alamofire.request(.GET, url + transactionType, parameters: params)
             .validate(statusCode: 200..<300)
             .responseString{response in
                 if let errorCode = response.result.error?.code {
-                    
+                    SVProgressHUD.showInfoWithStatus("请检查网络设置", maskType: .Clear)
+                    log.info("网络错误，error:\(errorCode)")
                 }else {
-                    
+                    success(result: response.result.value!)
+                    log.info(response.result.value!)
                 }
             }
         }else{
@@ -78,5 +85,9 @@ class NetWorkTool: NSObject {
         //            //回调请求失败
         //            failure(error: error)
         //        }
+    }
+    
+    class func toRequestParams(model: NSObject) -> String{
+        return ""
     }
 }

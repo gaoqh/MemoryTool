@@ -241,8 +241,12 @@ class LoginViewController: BaseViewController {
     
     //MARK: - 加载数据
     func loadData() {
-        NetWorkTool.request(NetWorkToolRequestType.GET, params: ["userName":"gaoqinghua", "passWord":"654321"], success: { (result) in
-            
+        let model = ReqLoginModel(userName: accountField.text!, passWord: pwdField.text!)
+        let params: NSDictionary = model.mj_keyValues()
+        let dict = params as! [String: AnyObject]
+        log.severe("\(params)")
+        NetWorkTool.request(NetWorkToolRequestType.GET, transactionType: NetWorkToolConstant.login,params: dict, success: { result in
+            log.debug(result)
             }) { (error) in
                 
         }

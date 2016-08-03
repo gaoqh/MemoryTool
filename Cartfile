@@ -5,3 +5,4 @@ github "SVProgressHUD/SVProgressHUD"
 github "SnapKit/SnapKit"      >= 0.15.0
 github "ccgus/fmdb"
 github "hyperoslo/ImagePicker"
+github "CoderMJLee/MJExtension"
