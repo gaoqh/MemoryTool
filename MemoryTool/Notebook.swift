@@ -7,9 +7,39 @@
 //
 
 import UIKit
-
-class Notebook: NSObject {
-    var name: String?
-    var isDefault: Bool?
+//MARK: - 请求
+class ReqNoteList: NSObject {
+    var userId: String?
     
+    init(userId: String) {
+        self.userId = userId
+    }
 }
+class ReqNoteSave: NSObject {
+    var userId: String?
+    var typeName: String?
+    var order: String?
+    
+    init(userId: String, typeName: String, order: String) {
+        self.userId = userId
+        self.typeName = typeName
+        self.order = order
+    }
+}
+class ReqNoteDelete: NSObject {
+    var userId: String?
+    
+    init(userId: String) {
+        self.userId = userId
+    }
+}
+class ReqNoteUpdate: NSObject {
+    var userId: String?
+    
+    init(userId: String) {
+        self.userId = userId
+    }
+}
+
+
+//MARK: - 响应

@@ -44,4 +44,18 @@ class ReqUpdatePwdModel: NSObject {
 }
 
 //MARK: - 响应
+class ResLoginModel: NSObject {
+    var result: String?
+    var userId: String?
+    
+}
 
+class ResRegisterModel: NSObject {
+    var result: String?
+    
+}
+
+class ResUpdatePwdModel: NSObject {
+    var result: String?
+    
+}

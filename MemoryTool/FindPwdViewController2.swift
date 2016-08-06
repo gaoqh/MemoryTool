@@ -127,8 +127,7 @@ class FindPwdViewController2:  BaseViewController{
         } else if !accountField.text!.isPureFloat() {
             SVProgressHUD.showInfoWithStatus("验证码格式不正确", maskType: .Clear)
         }else {
-            navigationController?.pushViewController(FindPwdViewController3(), animated: true)
-            
+            navigationController?.pushViewController(FindPwdViewController3(email: email!),animated: true)
         }
     }
     

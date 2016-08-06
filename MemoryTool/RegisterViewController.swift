@@ -183,9 +183,32 @@ class RegisterViewController: BaseViewController {
         } else if !accountField.text!.validateEmail() {
             SVProgressHUD.showInfoWithStatus("邮箱格式不正确", maskType: .Clear)
         } else {
-            SVProgressHUD.showSuccessWithStatus("注册成功")
-            navigationController?.popViewControllerAnimated(true)
+            loadData()
+            
         }
+    }
+    
+    func loadData() {
+        let model = ReqRegisterModel(userName: accountField.text!, passWord: pwdField.text!)
+        let params: NSDictionary = model.mj_keyValues()
+        let dict = params as! [String: AnyObject]
+        log.severe("\(params)")
+        NetWorkTool.request(NetWorkToolRequestType.GET, transactionType: NetWorkToolConstant.register,params: dict, success: { result in
+            let model = ResRegisterModel.mj_objectWithKeyValues(result)
+            switch model.result! {
+            case "0":
+                SVProgressHUD.showSuccessWithStatus("注册成功")
+                self.navigationController?.popViewControllerAnimated(true)
+            case "1":
+                SVProgressHUD.showInfoWithStatus("用户名密码不能为空")
+            case "2":
+                SVProgressHUD.showErrorWithStatus("登录失败")
+            default:break
+            }
+        }) { (error) in
+            
+        }
+
     }
     
     func hideKeyboard() {

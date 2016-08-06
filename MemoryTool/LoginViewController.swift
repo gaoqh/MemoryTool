@@ -220,12 +220,6 @@ class LoginViewController: BaseViewController {
             SVProgressHUD.showInfoWithStatus("邮箱格式不正确", maskType: .Clear)
         }else {
             loadData()
-//            SVProgressHUD.showSuccessWithStatus("登录成功", maskType: .Clear)
-//            navigationController?.dismissViewControllerAnimated(true, completion: {
-//                if self.loginHandler != nil {
-//                    self.loginHandler!()
-//                }
-//            })
         }
     }
     
@@ -246,7 +240,22 @@ class LoginViewController: BaseViewController {
         let dict = params as! [String: AnyObject]
         log.severe("\(params)")
         NetWorkTool.request(NetWorkToolRequestType.GET, transactionType: NetWorkToolConstant.login,params: dict, success: { result in
-            log.debug(result)
+            let model = ResLoginModel.mj_objectWithKeyValues(result)
+            switch model.result! {
+            case "0" :
+                SVProgressHUD.showSuccessWithStatus("登录成功")
+                self.navigationController?.dismissViewControllerAnimated(true, completion: { 
+                    if let handler = self.loginHandler {
+                        handler()
+                    }
+                })
+
+            case "1":
+                SVProgressHUD.showInfoWithStatus("用户名密码不能为空")
+            case "2":
+                SVProgressHUD.showErrorWithStatus("登录失败")
+            default:break
+            }
             }) { (error) in
                 
         }

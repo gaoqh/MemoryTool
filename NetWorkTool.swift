@@ -18,8 +18,22 @@ enum NetWorkToolRequestType: String {
 struct NetWorkToolConstant {
     /// 测试
     static var REQUEST_URL: String = "http://182.92.97.47:8080/mr"
-    
+    //MARK: - 登录注册
+    //登录
     static let login: String = "/user/login.shtml"
+    //注册
+    static let register: String = "/user/register.shtml"
+    //修改密码
+    static let updatePwd: String = "/user/updatePwd.shtml"
+    //MARK: - 笔记本
+    //记事本列表
+    static let noteList: String = "/notesType/list.shtml"
+    //记事本保存
+    static let noteSave: String = "/notesType/save.shtml"
+    //记事本删除
+    static let noteDelete: String = "/notesType/delete.shtml"
+    //记事本更新
+    static let noteUpdate: String = "/notesType/update.shtml"
 }
 
 

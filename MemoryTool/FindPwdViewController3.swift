@@ -11,8 +11,16 @@ import SVProgressHUD
 
 class FindPwdViewController3:  BaseViewController{
     
+    private var email: String?
     //MARK: - 构造方法
+    init(email: String) {
+        super.init(nibName: nil, bundle: nil)
+        self.email = email
+    }
     
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     //MARK: - 生命周期
     override func viewDidLoad() {
@@ -115,9 +123,33 @@ class FindPwdViewController3:  BaseViewController{
         } else if newPwdField2.text!.isEmpty {
             SVProgressHUD.showInfoWithStatus("密码不能为空", maskType: .Clear)
         }
-        navigationController?.popToRootViewControllerAnimated(true)
+        loadData()
 
     }
+    
+    func loadData() {
+        let model = ReqUpdatePwdModel(userName: email!, passWord: newPwdField1.text!, newPassWord: newPwdField2.text!)
+        let params: NSDictionary = model.mj_keyValues()
+        let dict = params as! [String: AnyObject]
+        log.severe("\(params)")
+        NetWorkTool.request(NetWorkToolRequestType.GET, transactionType: NetWorkToolConstant.updatePwd, params: dict, success: { result in
+            let model = ResUpdatePwdModel.mj_objectWithKeyValues(result)
+            switch model.result! {
+            case "0":
+                SVProgressHUD.showSuccessWithStatus("密码找回成功")
+                self.navigationController?.popToRootViewControllerAnimated(true)
+            case "1":
+                SVProgressHUD.showInfoWithStatus("用户名密码新密码不能为空")
+            case "2":
+                SVProgressHUD.showErrorWithStatus("原密码错误")
+            default:break
+            }
+        }) { (error) in
+            
+        }
+        
+    }
+
     
     func hideKeyboard() {
         newPwdField1.resignFirstResponder()

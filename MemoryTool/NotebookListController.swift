@@ -11,7 +11,7 @@ import UIKit
 class NotebookListController: UIViewController {
     //MARK: - 属性
     private var tableView: UITableView!
-    private var modelArray: [Notebook]?
+    private var modelArray: [ReqNoteList]?
     override func viewDidLoad() {
         super.viewDidLoad()
         
