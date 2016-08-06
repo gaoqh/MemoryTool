@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 extension UIBarButtonItem {
-    class func item(imageName: String = "", title: String = "", target: AnyObject?, action: Selector) -> UIBarButtonItem {
+    class func item(imageName: String = "", title: String = "", color: UIColor = UIColor.whiteColor(), target: AnyObject?, action: Selector) -> UIBarButtonItem {
         //初始化一个button
         let button = UIButton()
         button.addTarget(target, action: action, forControlEvents: UIControlEvents.TouchUpInside)
@@ -20,7 +20,7 @@ extension UIBarButtonItem {
             //设置文字以及字体颜色,以及字体大小
             button.setTitle(title, forState: UIControlState.Normal)
             button.titleLabel?.font = APP_FONT(14)
-            button.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+            button.setTitleColor(color, forState: UIControlState.Normal)
             //高亮的颜色
             button.setTitleColor(UIColor.orangeColor(), forState: UIControlState.Highlighted)
         }

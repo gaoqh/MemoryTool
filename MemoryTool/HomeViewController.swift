@@ -19,7 +19,6 @@ class HomeViewController: UIViewController, UINavigationControllerDelegate {
     private var monthLabel: UILabel!
     private var selectedDay: DayView!
     private var addPlanBtn: UIButton!
-    
     //数据源
     var reviseDaysArray: [CVDate] = [CVDate]()
 
@@ -88,17 +87,6 @@ class HomeViewController: UIViewController, UINavigationControllerDelegate {
         calendarView.calendarDelegate = self
         calendarView.calendarAppearanceDelegate = self
         
-        addPlanBtn = UIButton(type: .Custom)
-        view.addSubview(addPlanBtn)
-        addPlanBtn.sizeToFit()
-        addPlanBtn.snp_makeConstraints { (make) in
-            make.centerX.equalTo(0)
-            make.bottom.equalTo(view.snp_bottom).inset(6)
-        }
-        
-        addPlanBtn.setBackgroundImage(UIImage(named: "homeAdd"), forState: .Normal)
-        addPlanBtn.addTarget(self, action: #selector(HomeViewController.addPlanBtnClick), forControlEvents: .TouchUpInside)
-        
     }
     //MARK: - 点击事件
     func leftItemClick() {
@@ -109,12 +97,6 @@ class HomeViewController: UIViewController, UINavigationControllerDelegate {
         presentViewController(MainNavigationController(rootViewController: LoginViewController(loginHandler: { [weak self] in
             self!.navigationController?.pushViewController(ReviseViewController(), animated: true)
         })), animated: true, completion: nil)
-    }
-    
-    func addPlanBtnClick() {
-        let nav = MainNavigationController(rootViewController: AddPlanViewController())
-        presentViewController(nav, animated: true, completion: nil)
-        
     }
 
     override func didReceiveMemoryWarning() {

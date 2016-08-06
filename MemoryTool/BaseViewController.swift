@@ -12,7 +12,7 @@ class BaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        edgesForExtendedLayout = .None
         view.backgroundColor = Theme.ColorAppBackground
     }
 

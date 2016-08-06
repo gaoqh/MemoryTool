@@ -43,3 +43,19 @@ class ReqNoteUpdate: NSObject {
 
 
 //MARK: - 响应
+class Note: NSObject {
+    var id: String?
+    var userId: String?
+    var typeName: String?
+    var typeOrder: String?
+    var remark: String?
+    var status: String?
+    var createTime: String?
+    var lastUpdateTime: String?
+    
+}
+class ResNoteList: NSObject {
+    var result: String?
+    var list: [Note]?
+    
+}

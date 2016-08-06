@@ -101,7 +101,10 @@ class NetWorkTool: NSObject {
         //        }
     }
     
-    class func toRequestParams(model: NSObject) -> String{
-        return ""
+    class func toRequestParams(model: NSObject) -> [String: AnyObject]{
+        let params: NSDictionary = model.mj_keyValues()
+        let dict = params as! [String: AnyObject]
+        log.severe("\(params)")
+        return dict
     }
 }

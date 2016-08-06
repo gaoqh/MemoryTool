@@ -32,8 +32,12 @@ public func APP_FONT(fontSize: CGFloat) -> UIFont{
 /// 主题
 struct Theme {
     static let ColorNavi = UIColor(rgb: 0x2d2e3b)
+    static let ColorNaviTitleGreen = UIColor(rgb: 0x00ebb5)
     static let ColorAppBackground = UIColor(rgb: 0x353542)
     static let ColorCell = UIColor(rgb: 0x3f3f4d)
+    static let ColorPlaceholder = UIColor(rgb: 0x888890)
+    static let ColorCellText = UIColor(rgb: 0xffffff)
+    static let ColorCellDetail = UIColor(rgb: 0xa7a7ae)
 }
 //登录注册找回密码模块的大按钮宽度和屏幕宽度
 let btnWRatio: CGFloat = 584 / 750

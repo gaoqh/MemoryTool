@@ -212,15 +212,15 @@ class LoginViewController: BaseViewController {
     }
     func loginBtnClick(){
         
-        if accountField.text!.isEmpty {
-            SVProgressHUD.showInfoWithStatus("邮箱不能为空", maskType: .Clear)
-        } else if pwdField.text!.isEmpty {
-            SVProgressHUD.showInfoWithStatus("密码不能为空", maskType: .Clear)
-        } else if !accountField.text!.validateEmail() {
-            SVProgressHUD.showInfoWithStatus("邮箱格式不正确", maskType: .Clear)
-        }else {
+//        if accountField.text!.isEmpty {
+//            SVProgressHUD.showInfoWithStatus("邮箱不能为空", maskType: .Clear)
+//        } else if pwdField.text!.isEmpty {
+//            SVProgressHUD.showInfoWithStatus("密码不能为空", maskType: .Clear)
+//        } else if !accountField.text!.validateEmail() {
+//            SVProgressHUD.showInfoWithStatus("邮箱格式不正确", maskType: .Clear)
+//        }else {
             loadData()
-        }
+//        }
     }
     
     func hideKeyboard() {
@@ -235,7 +235,7 @@ class LoginViewController: BaseViewController {
     
     //MARK: - 加载数据
     func loadData() {
-        let model = ReqLoginModel(userName: accountField.text!, passWord: pwdField.text!)
+        let model = ReqLoginModel(userName: "gqh@wow.com", passWord: "654321")
         let params: NSDictionary = model.mj_keyValues()
         let dict = params as! [String: AnyObject]
         log.severe("\(params)")
@@ -244,6 +244,7 @@ class LoginViewController: BaseViewController {
             switch model.result! {
             case "0" :
                 SVProgressHUD.showSuccessWithStatus("登录成功")
+                AppInfo.setUserId(model.userId!)
                 self.navigationController?.dismissViewControllerAnimated(true, completion: { 
                     if let handler = self.loginHandler {
                         handler()

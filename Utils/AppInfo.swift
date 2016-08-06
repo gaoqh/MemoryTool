@@ -47,12 +47,12 @@ public class AppInfo {
         
     }
     private static var token:String = ""
-    
-    public static func setToken(t : String){
-     self.token = t
+    private static var userId: String?
+    public static func setUserId(userId : String){
+     self.userId = userId
     }
-    public static func getToken() -> String{
-        return self.token
+    public static func getUserId() -> String?{
+        return self.userId
     }
     
 }

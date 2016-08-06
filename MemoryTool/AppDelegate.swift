@@ -38,9 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         configSVProgressHUD()
         
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        let nav = MainNavigationController(rootViewController: HomeViewController())
-        window!.rootViewController = nav
-        
+        window!.rootViewController = MainTabBarController()
         window!.makeKeyAndVisible()
         
         return true

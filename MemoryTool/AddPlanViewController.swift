@@ -202,7 +202,10 @@ class AddPlanViewController: UIViewController {
     }
     
     func notebookCellClick() {
-        navigationController?.pushViewController(NotebookListController(), animated: true)
+        if let userId = AppInfo.getUserId() {
+            navigationController?.pushViewController(NotebookListController(), animated: true)
+        }
+        
     }
     func memoryCurveCellClick() {
         navigationController?.pushViewController(MemoryCurveListController(), animated: true)
