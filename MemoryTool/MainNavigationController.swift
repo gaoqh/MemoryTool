@@ -24,7 +24,7 @@ class MainNavigationController: UINavigationController {
     override func pushViewController(viewController: UIViewController, animated: Bool) {
         
         if childViewControllers.count>0 {
-            
+            viewController.hidesBottomBarWhenPushed = true
             //设置导航栏和tabBar栏的背景颜色
             viewController.navigationController?.navigationBar.backgroundColor = Theme.ColorNavi
             viewController.tabBarController?.tabBar.backgroundColor = Theme.ColorNavi

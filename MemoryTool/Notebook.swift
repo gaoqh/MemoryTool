@@ -27,17 +27,21 @@ class ReqNoteSave: NSObject {
     }
 }
 class ReqNoteDelete: NSObject {
-    var userId: String?
+    var id: String?
     
-    init(userId: String) {
-        self.userId = userId
+    init(id: String) {
+        self.id = id
     }
 }
 class ReqNoteUpdate: NSObject {
-    var userId: String?
+    var id: String?
+    var typeName: String?
+    var order: String?
     
-    init(userId: String) {
-        self.userId = userId
+    init(id: String, typeName: String, order: String) {
+        self.id = id
+        self.typeName = typeName
+        self.order = order
     }
 }
 
@@ -58,4 +62,9 @@ class ResNoteList: NSObject {
     var result: String?
     var list: [Note]?
     
+    
+    
+}
+class ResModelResult: NSObject {
+    var result: String?
 }

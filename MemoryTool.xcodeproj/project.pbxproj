@@ -140,6 +140,7 @@
 		01F9DD011D55F3DD00DAA7A7 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F9DD001D55F3DD00DAA7A7 /* MainTabBarController.swift */; };
 		01F9DD371D561D6F00DAA7A7 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F9DD281D561D5200DAA7A7 /* SnapKit.framework */; };
 		01F9DD381D561D6F00DAA7A7 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 01F9DD281D561D5200DAA7A7 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		01F9DD451D57063000DAA7A7 /* UIAlertControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F9DD441D57063000DAA7A7 /* UIAlertControllerExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -462,6 +463,7 @@
 		01F9DCE31D55D5F000DAA7A7 /* AddNotebookController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNotebookController.swift; sourceTree = "<group>"; };
 		01F9DD001D55F3DD00DAA7A7 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		01F9DD1D1D561D5200DAA7A7 /* SnapKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SnapKit.xcodeproj; path = Dependencies/SnapKit/SnapKit.xcodeproj; sourceTree = "<group>"; };
+		01F9DD441D57063000DAA7A7 /* UIAlertControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -886,6 +888,7 @@
 				01C4D6191D08E88D0079AD7D /* UIImageExtension.swift */,
 				01C4D61A1D08E88D0079AD7D /* UIViewExtensions.swift */,
 				0114F66E1D1292790074E3C7 /* NoHighlightButton.swift */,
+				01F9DD441D57063000DAA7A7 /* UIAlertControllerExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1302,6 +1305,7 @@
 				01A8E7C91D31F4BF00EA697F /* ZLPhotoPickerBrowserPhoto.m in Sources */,
 				01D6FB941D091BC00086A940 /* CVSet.swift in Sources */,
 				01A8E7D81D31F4BF00EA697F /* ZLPhotoPickerViewController.m in Sources */,
+				01F9DD451D57063000DAA7A7 /* UIAlertControllerExtensions.swift in Sources */,
 				0146CB171D3E6E24009DC509 /* MemoryCurveListController.swift in Sources */,
 				01A8E7D11D31F4BF00EA697F /* ZLPhotoAssets.m in Sources */,
 				0146CB3E1D445CFB009DC509 /* FindPwdViewController.swift in Sources */,
